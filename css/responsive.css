@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+    
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        font-size: 0.8rem;
+    }
+    .hero {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    
+}
+
+@media only screen and (max-width: 420px) {
+    section {
+        padding: 5vw;
+    }
+    .sidebar {
+        font-size: 0.8rem;
+        padding-top: 59px;
+    }
+}

@@ -1,0 +1,317 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+body {
+    font-family: Nunito,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /* color: #47404f; */
+    background: var(--clr-light);
+    color: var(--text-secondary);
+}
+/* .dashboard .btn,
+.dashboard input {
+    color: var(--text-primary) !important;
+} */
+.dashboard p {
+    font-size: 0.9em;
+}
+/* ----------------------------Header starts----------------------------------------------- */
+header {
+    font-size: 1rem;
+    box-shadow: var(--bx-shadow-1);
+    padding: 0 2vw;
+    z-index: 1111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--clr-light);
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+#menu-toggler {
+    line-height: 0;
+}
+#menu-toggler i {
+    font-size: 2em !important;
+}
+.header-search {
+    overflow: hidden;
+    border: var(--border-1);
+    border-radius: 50rem;
+}
+.header-search input {
+    font-size: 0.8em;
+    line-height: 0;
+}
+.user-dropdown img {
+    max-width: 3em;
+    border-radius: 50%;
+}
+.h-pill {
+    padding: 0.4em;
+    background: var(--text-bg);
+    border-radius: 6px;
+}
+.header-nav i {
+    font-size: 1.25em;
+    vertical-align: text-top;
+}
+.brand-logo {
+    max-width: 4.5em;
+    /* border: 1px solid #80808033; */
+}
+header .dropdown a {
+    font-size: 0.8em;
+}
+/* ----------------------------Header ends----------------------------------------------- */
+
+/* ----------------------------Sidebar starts----------------------------------------------- */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.15);
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s linear;
+    cursor: ew-resize;
+}
+.overlay.active {
+    z-index: 1;
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: visible;
+    overflow-y: clip;
+    padding-top: var(--menu-top-offset);
+    height: 100vh;
+    display: flex;
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 1;
+}
+.sidebar > ul {
+    box-shadow: var(--bx-shadow-2);
+}
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    overflow: auto;
+    max-height: 100%;
+    margin-bottom: 0;
+    background: var(--clr-light);
+    z-index: 2;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.side-menu {
+    transform: translateX(-105%);
+}
+.side-menu.active {
+    transform: none;
+    pointer-events: all;
+}
+.sidebar ul li {
+    cursor: pointer;
+    position: relative;
+}
+.side-menu li {
+    padding: 1.5em 1.1em 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    border-bottom: var(--border-1);
+    /* 1px solid #80808033 */
+}
+.side-menu > li.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2em;
+    width: 2em;
+    background: var(--clr-primary);
+    clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+.side-menu li i {
+    font-size: 2em;
+}
+.side-menu > li > span {
+    font-size: 0.73em;
+}
+.nested-side-menu {
+    padding: 0.6em 0;
+    z-index: 1 !important;
+    transform: translate(-180%);
+}
+.nested-side-menu.active {
+    transform: none;
+    pointer-events: all;
+}
+.nested-side-menu ul > li {
+    padding: 1em 1em 1em 2em;
+    font-size: 0.8em;
+    min-width: 10rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    border-bottom: var(--border-1);
+    color: #332e38;
+}
+.nested-side-menu ul > li i {
+    font-size: 1.2em;
+}
+.sidebar > ul::-webkit-scrollbar {
+    width: 0;
+}
+
+/* -----------------------------------sidebar ends---------------------------- */
+::-webkit-scrollbar {
+width: 5px;
+}
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #555;
+}
+
+#main-content-wrapper {
+    padding-top: var(--menu-top-offset);
+    padding-left: var(--menu-left-offset);
+    transition: 0.3s;
+}
+section {
+    padding: 2vw 2vw;
+}
+/* ------------------------------------hero section starts-------------------------------- */
+.hero {
+    font-size: 1rem;
+    overflow: hidden;
+}
+.hero .heading {
+    border-bottom: var(--border-2);
+    padding-bottom: 0.75em;
+}
+.hero .heading h5 {
+    display: inline;
+}
+.hero .heading span {
+    font-size: 0.75em;
+    padding: 0 1em;
+}
+.heading span:last-child {
+    border-left: var(--border-2);
+}
+.hero .card {
+    box-shadow: var(--bx-shadow-2);    
+    border: none;
+}
+.summary .card {
+    color: var(--clr-primary);
+}
+.summary .card-body i {
+    font-size: 3.4em;
+    opacity: 0.5;
+}
+.summary .card .content p:first-child {
+    font-size: 0.8em;
+    color: var(--text-primary);
+}
+.summary .card .content p:last-child {
+    font-size: 1.3em;
+}
+
+.chart-row-1 .card {
+    text-align: center;             /* temporaty use for centering the images */
+}
+.chart-row-1 .card-body > p {
+    font-size: 0.9em;
+    margin-bottom: 0;
+    text-align: left;
+}
+.chart-row-1 img {
+    height: 260px;
+}
+
+/* ------------------------------------hero section starts-------------------------------- */
+.eChart {
+    color: var(--clr-primary);
+}
+.eChart p:first-child {
+    font-size: 0.72em;
+    color: var(--text-primary);
+}
+.eChart p:last-child {
+    font-size: 1.3em;
+}
+.chart-row-2 .eChart img {
+    height: 225px;
+    width: 100%;
+}
+
+.products-chart ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    white-space: nowrap;
+}
+.products-chart ul li:not(:last-child) {
+    margin-bottom: 0.8em;
+}
+.products-chart li button {
+    background: var(--clr-primary);
+    border: none;
+    outline: none;
+    padding: 0.5em 0.6em;
+    border-radius: 3px;
+    font-size: 0.75em;
+    color: var(--clr-light);
+}
+.products-chart ul li > div {
+    display: flex;
+    gap: 1em;
+}
+.products-chart li img {
+    width: 4em;
+    height: 4em;
+}
+.products-chart li h5 {
+    font-size: 0.85em;
+    color: var(--clr-primary);
+    margin-bottom: 0.5em;
+    margin-top: 0.2em;
+}
+.products-chart li h6 {
+    font-size: 0.65em;
+    color: var(--text-secondary);
+    margin-bottom: 0.3em;
+}
+.products-chart li p {
+    font-size: 0.6em;
+    color: var(--clr-tertiary);
+    margin-bottom: 0;
+    font-weight: 600;
+}

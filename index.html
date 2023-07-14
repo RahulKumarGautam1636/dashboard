@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/icofont/icofont.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <title>Dashboard</title>
+</head>
+<body class="dashboard">
+    <header>
+        <nav>
+            <ul class="header-nav">
+                <li>
+                    <div class="toggler-box d-flex align-items-center">
+                        <img class="brand-logo logo" src="img/logo.png" alt="logo">
+                        <a href="#" id="menu-toggler"><i class='bx bx-menu'></i></a>
+                    </div>
+                </li>
+                <li class="d-none d-md-block">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary btn-sm dropdown-toggle bg-transparent border-0 text-dark" href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false">Mega menu</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownLink">
+                            <a href="#" class="dropdown-item">First item</a>
+                            <a href="#" class="dropdown-item">Second item</a>
+                            <a href="#" class="dropdown-item">Third item</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="d-none d-md-block">
+                    <div class="input-group header-search">
+                        <input type="text" class="form-control border-0" placeholder="Search" aria-label="Amount (to nearest dollar)">
+                        <button class="input-group-text border-0"><i class='bx bx-search'></i></button>
+                    </div>
+                </li>
+                <li class="ms-auto">
+                    <a class="h-pill" href="#"><i class='bx bx-cross'></i></a>
+                </li>
+                <li>
+                    <a class="h-pill" href="#"><i class='bx bx-box'></i></a>
+                </li>
+                <li>
+                    <a class="h-pill position-relative" href="#">
+                        <i class='bx bx-bell'>
+                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size: 0.55em; font-family: 'Nunito'; background: #e44dff; display: block;">2</span>
+                        </i>
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown user-dropdown">
+                        <a href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/user.jpg" alt="user"></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownLink">
+                            <a href="#" class="dropdown-item">First item</a>
+                            <a href="#" class="dropdown-item">Second item</a>
+                            <a href="#" class="dropdown-item">Third item</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <sidebar class="sidebar">
+        <ul class="side-menu active" id="side-menu">
+            <li side-parent="1">
+                <i class="icofont-dashboard-web"></i><span> Dashboard</span>
+            </li>
+            <li side-parent="2">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="3">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="4">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="5">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="6">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="7">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+            <li side-parent="8">
+                <i class='bx bx-briefcase'></i><span> UI Kits</span>
+            </li>
+        </ul>
+
+        <ul class="nested-side-menu" id="nested-side-menu">
+            <li side-child="1">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="2">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Designs</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="3">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="4">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="5">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="6">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="7">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="8">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+        </ul>
+    </sidebar>
+
+    <main id="main-content-wrapper">
+        <section id="hero" class="hero">
+            <div class="heading">
+                <h5>Version 1</h5>
+                <br class="d-sm-none"/>
+                <span>Dashboard</span>
+                <span>Version 1</span>
+            </div>
+            <div class="row row-cols-2 row-cols-lg-4 summary pt-3 pt-lg-4 gy-2 gy-lg-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <i class='bx bx-bell'></i>
+                            <div class="content mx-auto">
+                                <p class="mb-0">Sales</p>
+                                <p class="mb-0">$4021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <i class='bx bx-bell'></i>
+                            <div class="content mx-auto">
+                                <p class="mb-0">Sales</p>
+                                <p class="mb-0">$4021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <i class='bx bx-bell'></i>
+                            <div class="content mx-auto">
+                                <p class="mb-0">Sales</p>
+                                <p class="mb-0">$4021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body d-flex align-items-center">
+                            <i class='bx bx-bell'></i>
+                            <div class="content mx-auto">
+                                <p class="mb-0">Sales</p>
+                                <p class="mb-0">$4021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row chart-row-1 pt-3 pt-lg-4 gy-3">
+                <div class="col-12 col-md-8">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <p>This Year Sales</p>
+                            <img class="img-fluid" src="./img/bar-chart.png" alt="bar chart">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <p>This Year Sales</p>
+                            <img class="img-fluid" src="./img/pie-chart.png" alt="pie chart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row chart-row-2 pt-3 pt-lg-4 gy-3">
+                <div class="col-12 col-md-6">
+                    <div class="row gy-3">
+                        <div class="col-12 col-md-6">
+                            <div class="card border-0 eChart">
+                                <div class="card-body">
+                                    <p class="mb-0">Last Month Sales</p>
+                                    <p class="mb-0">$40250</p>
+                                </div>
+                                <div class="cart-box">
+                                    <img class="img-fluid" src="./img/wave-chart.png" alt="bar chart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card border-0 eChart">
+                                <div class="card-body">
+                                    <p class="mb-0">Last Week Sales</p>
+                                    <p class="mb-0" style="color: var(--clr-secondary);">$10250</p>
+                                </div>
+                                <div class="cart-box">
+                                    <img class="img-fluid" src="./img/wave-chart.png" alt="bar chart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 products-chart">
+                        <div class="card-body">
+                            <p>Top selling products</p>
+                            <div>
+                                <ul class="list-inline mb-0 overflow-auto">
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button type="button">View Details</button>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button type="button">View Details</button>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button type="button">View Details</button>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button type="button">View Details</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/index.js"></script>
+<!-- <script>
+    $(function() {
+
+    })
+</script> -->
+</body>
+</html>

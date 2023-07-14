@@ -1,0 +1,25 @@
+:root {
+    --clr-light: #fff;
+    --clr-dark: #000;
+
+    --text-primary: #332e38;
+    --text-secondary: #47404f;
+    --text-bg: aliceblue;
+
+    --clr-primary: #639;
+    --clr-secondary: #ffc107;
+    --clr-tertiary: #f44336;
+    /* --bg-primary: #7648a3; */
+
+    --bx-shadow-1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
+    --bx-shadow-2: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
+    --border-1: 1px solid #80808033;
+    --border-2: 1px solid #80808052;
+
+    --menu-left-offset: 93px;
+    --menu-top-offset: 72px;
+}
+
+.dark-t {
+
+}

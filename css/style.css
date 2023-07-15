@@ -18,6 +18,9 @@ body {
 .dashboard p {
     font-size: 0.9em;
 }
+.dashboard .dropdown a {
+    font-size: 0.8em;
+}
 /* ----------------------------Header starts----------------------------------------------- */
 header {
     font-size: 1rem;
@@ -41,6 +44,7 @@ header {
 }
 #menu-toggler {
     line-height: 0;
+    cursor: pointer;
 }
 #menu-toggler i {
     font-size: 2em !important;
@@ -54,6 +58,12 @@ header {
     font-size: 0.8em;
     line-height: 0;
 }
+.header-search button:hover {
+    background: var(--clr-primary);
+}
+.header-search button:hover i {
+    color: white;
+}
 .user-dropdown img {
     max-width: 3em;
     border-radius: 50%;
@@ -66,14 +76,13 @@ header {
 .header-nav i {
     font-size: 1.25em;
     vertical-align: text-top;
+    color: hsla(var(--hue), var(--sat), 65%);
 }
 .brand-logo {
     max-width: 4.5em;
     /* border: 1px solid #80808033; */
 }
-header .dropdown a {
-    font-size: 0.8em;
-}
+
 /* ----------------------------Header ends----------------------------------------------- */
 
 /* ----------------------------Sidebar starts----------------------------------------------- */
@@ -139,7 +148,10 @@ header .dropdown a {
     align-items: center;
     gap: 0.4em;
     border-bottom: var(--border-1);
-    /* 1px solid #80808033 */
+}
+.side-menu li:hover,
+.nested-side-menu ul li:hover {
+    color: hsla(var(--hue), var(--sat), 65%);
 }
 .side-menu > li.active::before {
     content: '';
@@ -148,7 +160,7 @@ header .dropdown a {
     right: 0;
     height: 2em;
     width: 2em;
-    background: var(--clr-primary);
+    background: hsla(var(--hue), var(--sat), 65%);
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 .side-menu li i {
@@ -175,6 +187,7 @@ header .dropdown a {
     gap: 0.4em;
     border-bottom: var(--border-1);
     color: #332e38;
+    pointer-events: all;
 }
 .nested-side-menu ul > li i {
     font-size: 1.2em;
@@ -205,26 +218,26 @@ background: #555;
 section {
     padding: 2vw 2vw;
 }
-/* ------------------------------------hero section starts-------------------------------- */
-.hero {
+/* ------------------------------------home section starts-------------------------------- */
+.home {
     font-size: 1rem;
     overflow: hidden;
 }
-.hero .heading {
+.home .heading {
     border-bottom: var(--border-2);
     padding-bottom: 0.75em;
 }
-.hero .heading h5 {
+.home .heading h5 {
     display: inline;
 }
-.hero .heading span {
+.home .heading span {
     font-size: 0.75em;
     padding: 0 1em;
 }
 .heading span:last-child {
     border-left: var(--border-2);
 }
-.hero .card {
+.home .card {
     box-shadow: var(--bx-shadow-2);    
     border: none;
 }
@@ -233,7 +246,7 @@ section {
 }
 .summary .card-body i {
     font-size: 3.4em;
-    opacity: 0.5;
+    color: hsla(var(--hue), var(--sat), 80%)
 }
 .summary .card .content p:first-child {
     font-size: 0.8em;
@@ -255,7 +268,7 @@ section {
     height: 260px;
 }
 
-/* ------------------------------------hero section starts-------------------------------- */
+/* ------------------------------------home section starts-------------------------------- */
 .eChart {
     color: var(--clr-primary);
 }
@@ -281,8 +294,8 @@ section {
 .products-chart ul li:not(:last-child) {
     margin-bottom: 0.8em;
 }
-.products-chart li button {
-    background: var(--clr-primary);
+.controlled-btn {
+    background: hsla(var(--hue), var(--sat), 65%);
     border: none;
     outline: none;
     padding: 0.5em 0.6em;
@@ -315,3 +328,198 @@ section {
     margin-bottom: 0;
     font-weight: 600;
 }
+
+/* .chart-row-3----------------------------------------------- */
+
+.user_table td,
+.user_table th {
+    vertical-align: middle;
+    border-bottom: var(--border-1);
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+.user_table {
+    font-size: 0.75em;
+    text-align: center;
+}
+.chart-row-3 .card-header {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: var(--border-1); 
+    display: flex;
+    justify-content: space-between;
+}
+.user_table img {
+    font-size: 0.75em;
+    max-height: 2.5rem;
+}
+.user-table-card i {
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+/* --------------User form starts-------------------------------------- */
+.user-form {
+    font-size: 1rem;
+}
+.user-form .card {
+    box-shadow: var(--bx-shadow-2);    
+    border: none;
+}
+.user-form .card-title {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.user-form .card-header {
+    padding: 1.1em 1.25em 1em;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,.03);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.user-form .card-body {
+    flex: 1 1 auto;
+    padding: 0.65em 1.25em;
+}
+/* .user-form .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+} */
+.user-form .form-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+.user-form .form-group label {
+    font-size: 0.75em;
+    color: #70657b;
+    margin-bottom: 4px;
+}
+.user-form label.ul-form__label {
+    font-size: 0.75em;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+    text-align: right;
+}
+.user-form .form-control {
+    outline: initial!important;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #47404f;
+    font-size: 0.8em;
+    padding: 0.5em 0.9em 0.32em;
+}
+.user-form small.ul-form__text {
+    /* margin-top: 10px; */
+    color: #bbb;
+    font-weight: 400;
+    font-size: 0.7em;
+}
+.user-form .form-text {
+    display: block;
+    margin-top: .25em;
+}
+.custom-separator {
+    border-bottom: 1px dashed #ebedf2;
+    margin: 0.1em 0 0.3em;
+}
+.input-group-append, .input-group-prepend {
+    display: flex;
+}
+.input-group-prepend {
+    margin-right: -1px;
+}
+.input-group-prepend > div {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.input-right-icon {
+    position: relative;
+}
+span.span-right-input-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 58%;
+    right: 10px;
+}
+.user-form .form-group i {
+    color: #70657b;
+    font-size: 1em;
+    font-weight: 600;
+}
+.ul-form__radio-inline {
+    display: flex;
+}
+.form-check-inline {
+    display: inline-flex;
+    align-items: center;
+    padding-left: 0;
+    margin-right: .75em;
+}
+.checkbox, .radio {
+    display: block;
+    position: relative;
+    padding-left: 2.1em;
+    margin-bottom: 0.75em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox input, .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+span.ul-form__radio-font {
+    font-size: 1em;
+    font-weight: 500;
+}
+.checkbox .checkmark, .radio .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 4px;
+    background-color: #dee2e6;
+}
+.radio .checkmark {
+    border-radius: 50%;
+}
+.checkbox input:checked~.checkmark:after, .radio input:checked~.checkmark:after {
+    display: block;
+}
+.checkbox .checkmark:after, .radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 4px;
+    bottom: 0;
+    margin: auto;
+    height: 0.5em;
+    width: 0.5em;
+    background: white;
+    border-radius: 3px;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox input:checked~.checkmark, .radio input:checked~.checkmark {
+    background-color: #639;
+}
+.user-form .card-footer {
+    border-top: var(--border-1);
+    padding: 1.1em 1.25em 1em;
+    background-color: rgba(0,0,0,.03);
+}
+.user-form .card-footer button {
+    font-size: 0.94em;
+}
+/* --------------User form ends-------------------------------------- */

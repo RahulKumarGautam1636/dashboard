@@ -4,6 +4,7 @@ $(function() {
     const nestedSideMenu = $('#nested-side-menu > li');
     const overlay = $('#overlay');
     const menuToggler = $('#menu-toggler');
+    const summary = $('.summary');
 
     // initial page setup..
     document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);
@@ -36,8 +37,25 @@ $(function() {
         sideMenu.toggleClass('active');
         if (sideMenu.hasClass('active')) {
             document.body.style.setProperty('--menu-left-offset', `${sideMenu.width()}px`);
+            summary.css('font-size', 'clamp(0.2em, 2.8vw, 1em)');                               
         } else {
             document.body.style.setProperty('--menu-left-offset', '0');
+            summary.css('font-size', '1em');
         }
     })
+
+    const hueRange = $('#hue');
+    const satRange = $('#sat');
+    const litRange = $('#lit');
+
+    hueRange.change(() => {
+        document.body.style.setProperty('--hue', `${hueRange.val()}deg`);
+    })
+    satRange.change(() => {
+        document.body.style.setProperty('--sat', `${satRange.val()}%`);
+    })
+    litRange.change(() => {
+        document.body.style.setProperty('--lit', `${litRange.val()}%`);
+    })
 })
+

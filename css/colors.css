@@ -1,4 +1,7 @@
 :root {
+    --hue: 270deg;
+    --sat: 50%;
+    --lit: 40%;
     --clr-light: #fff;
     --clr-dark: #000;
 
@@ -7,6 +10,7 @@
     --text-bg: aliceblue;
 
     --clr-primary: #639;
+    --clr-primary: hsla(var(--hue), var(--sat), var(--lit));
     --clr-secondary: #ffc107;
     --clr-tertiary: #f44336;
     /* --bg-primary: #7648a3; */

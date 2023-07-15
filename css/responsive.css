@@ -10,9 +10,17 @@
     header {
         font-size: 0.8rem;
     }
-    .hero {
+    .home {
         font-size: 0.8rem;
     }
+    .user-form {
+        font-size: 0.85rem;
+    }
+    .chart-row-2 .eChart img,
+    .chart-row-1 img {
+        height: auto;
+    }
+
 }
 
 @media only screen and (max-width: 576px) {

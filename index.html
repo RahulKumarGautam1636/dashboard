@@ -19,7 +19,7 @@
                 <li>
                     <div class="toggler-box d-flex align-items-center">
                         <img class="brand-logo logo" src="img/logo.png" alt="logo">
-                        <a href="#" id="menu-toggler"><i class='bx bx-menu'></i></a>
+                        <span id="menu-toggler"><i class='bx bx-menu'></i></span>
                     </div>
                 </li>
                 <li class="d-none d-md-block">
@@ -180,7 +180,7 @@
     </sidebar>
 
     <main id="main-content-wrapper">
-        <section id="hero" class="hero">
+        <section id="home" class="home">
             <div class="heading">
                 <h5>Version 1</h5>
                 <br class="d-sm-none"/>
@@ -295,7 +295,7 @@
                                                 <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
                                             </div>
                                         </div>
-                                        <button type="button">View Details</button>
+                                        <button class="controlled-btn" type="button">View Details</button>
                                     </li>
                                     <li>
                                         <div>
@@ -306,7 +306,7 @@
                                                 <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
                                             </div>
                                         </div>
-                                        <button type="button">View Details</button>
+                                        <button class="controlled-btn" type="button">View Details</button>
                                     </li>
                                     <li>
                                         <div>
@@ -317,7 +317,7 @@
                                                 <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
                                             </div>
                                         </div>
-                                        <button type="button">View Details</button>
+                                        <button class="controlled-btn" type="button">View Details</button>
                                     </li>
                                     <li>
                                         <div>
@@ -328,7 +328,7 @@
                                                 <p>$450 <span class="text-muted text-decoration-line-through">$550</span></p>
                                             </div>
                                         </div>
-                                        <button type="button">View Details</button>
+                                        <button class="controlled-btn" type="button">View Details</button>
                                     </li>
                                 </ul>
                             </div>
@@ -336,6 +336,269 @@
                     </div>
                 </div>
             </div>
+            <div class="row chart-row-3 pt-3 pt-lg-4 gy-3">
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 user-table-card">
+                        <div class="card-header">
+                            <p class="mb-0">New Users</p>
+                            <div class="dropdown">
+                                <a href="#" id="user_table_dropdown" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bx-cog'></i></a>
+                                <div class="dropdown-menu" aria-labelledby="user_table_dropdown">
+                                    <a href="#" class="dropdown-item">Add new user</a>
+                                    <a href="#" class="dropdown-item">View all user</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table user_table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Avatar</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Smith Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Smith@gmail.com</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil text-success me-2'></i>
+                                            <i class='bx bx-x-circle text-danger'></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jhon Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Jhon@gmail.com</td>
+                                        <td><span class="badge bg-info">Pending</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil text-success me-2'></i>
+                                            <i class='bx bx-x-circle text-danger'></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Alex</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Otto@gmail.com</td>
+                                        <td><span class="badge bg-warning">Not Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil text-success me-2'></i>
+                                            <i class='bx bx-x-circle text-danger'></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Mathew Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Mathew@gmail.com</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil text-success me-2'></i>
+                                            <i class='bx bx-x-circle text-danger'></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-12 col-md-6">
+                    
+                </div> -->
+            </div>
+        </section>
+        <section>
+            <div class="row user-form">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="card-title"> 3 Columns Form Layout</h3>
+                        </div>
+                        <!--begin::form-->
+                        <form action="">
+                            <div class="card-body">
+
+
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                        <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your full name
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail12" class="ul-form__label">Contact Number:</label>
+                                        <input type="text" class="form-control" id="inputEmail12" placeholder="Enter Contact Number">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your contact number
+                                        </small>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail13" class="ul-form__label">Username:</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text bg-transparent">
+                                                    <i class='bx bxs-user'></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your username
+                                        </small>
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="custom-separator"></div>
+
+
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputtext14" class="ul-form__label">Contact:</label>
+                                        <input type="text" class="form-control" id="inputtext14" placeholder="Enter contact number ">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your contact
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail15" class="ul-form__label">Fax:</label>
+                                        <div class="input-right-icon">
+                                            <input type="text" class="form-control" id="inputEmail15" placeholder="Fax Number">
+                                            <span class="span-right-input-icon">
+                                                <i class='bx bx-info-circle'></i>
+                                            </span>
+                                        </div>
+
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your Fax
+                                        </small>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail16" class="ul-form__label">Address:</label>
+                                        <div class="input-right-icon">
+                                            <input type="text" class="form-control" id="inputEmail16" placeholder="Enter your address">
+                                            <span class="span-right-input-icon">
+                                                <i class='bx bxs-map'></i>
+                                            </span>
+                                        </div>
+
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your address
+                                        </small>
+                                    </div>
+
+
+
+
+
+                                </div>
+
+
+                                <div class="custom-separator"></div>
+
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4 mr-2">
+                                        <label for="inputEmail17" class="ul-form__label">Postcode:</label>
+                                        <div class="input-right-icon">
+                                            <input type="text" class="form-control" id="inputEmail17" placeholder="Enter your postcode">
+                                            <span class="span-right-input-icon">
+                                                <i class='bx bx-mail-send'></i>
+                                            </span>
+                                        </div>
+
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your postcode
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="inputEmail18" class="ul-form__label">User Group:</label>
+                                        <div class="ul-form__radio-inline">
+                                            <label class=" ul-radio__position radio radio-primary form-check-inline">
+                                                <input type="radio" name="radio" value="0">
+                                                <span class="ul-form__radio-font">Sales Person</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="ul-radio__position radio radio-primary">
+                                                <input type="radio" name="radio" value="0">
+                                                <span class="ul-form__radio-font">Customer</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please select user group
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="inputRange" class="form-label">Range input label</label>
+                                        <input type="range" id="hue" class="form-range" min="0" max="360">
+                                        <input type="range" id="sat" class="form-range" min="0" max="100">
+                                        <input type="range" id="lit" class="form-range" min="0" max="100">
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="card-footer">
+                                <div class="mc-footer">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center">
+                                            <button type="button" class="controlled-btn m-1">Save</button>
+                                            <button type="button" class="controlled-btn btn-outlined m-1">Cancel</button>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                        <!-- end::form 3-->
+
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
 

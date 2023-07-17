@@ -433,9 +433,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-12 col-md-6">
-                    
-                </div> -->
+                <div class="col-12 col-md-6">
+                    <label for="inputRange" class="form-label">Range input label</label>
+                    <input type="range" id="hue" class="form-range" min="0" max="360">
+                    <input type="range" id="sat" class="form-range" min="0" max="100">
+                    <input type="range" id="lit" class="form-range" min="0" max="100">
+                    <div id="parent">Click me</div>
+                </div>
             </div>
         </section>
         <section>
@@ -445,11 +449,10 @@
                         <div class="card-header bg-transparent">
                             <h3 class="card-title"> 3 Columns Form Layout</h3>
                         </div>
+
                         <!--begin::form-->
-                        <form action="">
-                            <div class="card-body">
-
-
+                        <div class="card-body">
+                            <form action="">
                                 <div class="row form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputtext11" class="ul-form__label">Full Name:</label>
@@ -480,14 +483,8 @@
                                             Please enter your username
                                         </small>
                                     </div>
-
-
                                 </div>
-
-
                                 <div class="custom-separator"></div>
-
-
                                 <div class="row form-row">
                                     <div class="form-group col-md-4">
                                         <label for="inputtext14" class="ul-form__label">Contact:</label>
@@ -504,36 +501,10 @@
                                                 <i class='bx bx-info-circle'></i>
                                             </span>
                                         </div>
-
                                         <small id="passwordHelpBlock" class="ul-form__text form-text ">
                                             Please enter your Fax
                                         </small>
                                     </div>
-
-                                    <div class="form-group col-md-4">
-                                        <label for="inputEmail16" class="ul-form__label">Address:</label>
-                                        <div class="input-right-icon">
-                                            <input type="text" class="form-control" id="inputEmail16" placeholder="Enter your address">
-                                            <span class="span-right-input-icon">
-                                                <i class='bx bxs-map'></i>
-                                            </span>
-                                        </div>
-
-                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
-                                            Please enter your address
-                                        </small>
-                                    </div>
-
-
-
-
-
-                                </div>
-
-
-                                <div class="custom-separator"></div>
-
-                                <div class="row form-row">
                                     <div class="form-group col-md-4 mr-2">
                                         <label for="inputEmail17" class="ul-form__label">Postcode:</label>
                                         <div class="input-right-icon">
@@ -542,9 +513,23 @@
                                                 <i class='bx bx-mail-send'></i>
                                             </span>
                                         </div>
-
                                         <small id="passwordHelpBlock" class="ul-form__text form-text ">
                                             Please enter your postcode
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="custom-separator"></div>
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail16" class="ul-form__label">Address:</label>
+                                        <div class="input-right-icon">
+                                            <textarea class="form-control" placeholder="Write your message here" aria-label="Message" aria-describedby="textarea"></textarea>
+                                            <span class="span-right-input-icon" style="top: 36%">
+                                                <i class='bx bxs-map'></i>
+                                            </span>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your address
                                         </small>
                                     </div>
                                     <div class="form-group col-md-4 ">
@@ -566,32 +551,173 @@
                                         </small>
                                     </div>
                                     <div class="form-group col-md-4 ">
-                                        <label for="inputRange" class="form-label">Range input label</label>
-                                        <input type="range" id="hue" class="form-range" min="0" max="360">
-                                        <input type="range" id="sat" class="form-range" min="0" max="100">
-                                        <input type="range" id="lit" class="form-range" min="0" max="100">
+                                        <label for="picker1">Select your option</label>
+                                        <select class="form-control">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please select user group
+                                        </small>
                                     </div>
-
                                 </div>
-
-
-                            </div>
-
-                            <div class="card-footer">
-                                <div class="mc-footer">
-                                    <div class="row">
-                                        <div class="col-lg-12 text-center">
-                                            <button type="button" class="controlled-btn m-1">Save</button>
-                                            <button type="button" class="controlled-btn btn-outlined m-1">Cancel</button>
-
-
-
+                            </form>
+                            <div class="custom-separator"></div>
+                            <div class="tab-content">
+                                <div id="tabFade-pane-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tabFade-1">
+                                    <div class="row form-row overflow-auto">
+                                        <div class="col-12">
+                                            <table class="table input_table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Avatar</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></th>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></th>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></th>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></th>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
+                                <div id="tabFade-pane-2" class="tab-pane fade" role="tabpanel" aria-labelledby="tabFade-2">
+                                    <h2>Tab 2</h2>
+                                </div>
+                                <div id="tabFade-pane-3" class="tab-pane fade" role="tabpanel" aria-labelledby="tabFade-3">
+                                    <h2>Tab 3</h2>
+                                </div>
                             </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mc-footer">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <button type="button" class="controlled-btn mx-1">Tab one</button> -->
 
-                        </form>
+                                        <ul class="nav nav-tabs border-0" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-1" class="controlled-btn mx-1 px-3 border-0 nav-link active" data-bs-toggle="tab" data-bs-target="#tabFade-pane-1" role="tab" aria-controls="tabFade-pane-1" aria-selected="true">Panel 1</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-2" class="controlled-btn mx-1 px-3 border-0 nav-link" data-bs-toggle="tab" data-bs-target="#tabFade-pane-2" role="tab" aria-controls="tabFade-pane-2" aria-selected="false">Panel 2</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-3" class="controlled-btn mx-1 px-3 border-0 nav-link" data-bs-toggle="tab" data-bs-target="#tabFade-pane-3" role="tab" aria-controls="tabFade-pane-3" aria-selected="false">Panel 3</button>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
                         <!-- end::form 3-->
 
@@ -605,10 +731,38 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
 <script src="./js/index.js"></script>
-<!-- <script>
+<script src="./js/vanilla-picker.js"></script>
+<script>
     $(function() {
 
+        var parent = document.querySelector('#parent');
+        const clr = getComputedStyle(document.body).getPropertyValue('--clr-primary');
+        var clr1 = clr.replace('deg', '');
+        var picker = new Picker({
+            parent: parent,
+            color: clr1,
+            popup: false
+        });
+
+        picker.onDone = function(color) {
+            parent.style.background = color.rgbaString;
+            const hue = color.hsla[0] * 360;
+            const sat = color.hsla[1] * 100;
+            const lit = color.hsla[2] * 100;
+            document.querySelector(':root').style.setProperty('--hue', `${hue}deg`);
+            document.querySelector(':root').style.setProperty('--sat', `${sat}%`);
+            document.querySelector(':root').style.setProperty('--lit', `${lit}%`);
+            // console.log(color);
+            // console.log(color.hex);
+            // console.log(color.hslString);
+            console.log(color.hsla);
+            // console.log(color.hslaString);
+            // console.log(color.rgbString);
+            // console.log(color.rgba);
+            // console.log(color.rgbaString);
+        };
+
     })
-</script> -->
+</script>
 </body>
 </html>

@@ -9,6 +9,7 @@ $(function() {
     // initial page setup..
     document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);
     document.body.style.setProperty('--menu-left-offset', `${$('#side-menu').width()}px`);
+    summary.css('font-size', 'clamp(0.2em, 2.8vw, 1em)'); 
     $(window).resize(function(){
         document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);
         if (sideMenu.hasClass('active')) document.body.style.setProperty('--menu-left-offset', `${$('#side-menu').width()}px`);
@@ -49,13 +50,13 @@ $(function() {
     const litRange = $('#lit');
 
     hueRange.change(() => {
-        document.body.style.setProperty('--hue', `${hueRange.val()}deg`);
+        document.querySelector(':root').style.setProperty('--hue', `${hueRange.val()}deg`);
     })
     satRange.change(() => {
-        document.body.style.setProperty('--sat', `${satRange.val()}%`);
+        document.querySelector(':root').style.setProperty('--sat', `${satRange.val()}%`);
     })
     litRange.change(() => {
-        document.body.style.setProperty('--lit', `${litRange.val()}%`);
+        document.querySelector(':root').style.setProperty('--lit', `${litRange.val()}%`);
     })
 })
 

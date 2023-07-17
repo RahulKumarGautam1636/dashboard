@@ -24,8 +24,8 @@
 }
 
 .dark-mode {
-    --bg-primary: #fafafa;
-    --bg-secondary: #000;
+    --bg-primary: #333333;
+    --bg-secondary: #3c3c3c;
 
     --text-primary: #FFF;
     --text-secondary: #ebebeb;

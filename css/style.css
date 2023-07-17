@@ -17,6 +17,7 @@ body {
 } */
 .dashboard p {
     font-size: 0.9em;
+    color: var(--text-primary);                     
 }
 .dashboard .dropdown a {
     font-size: 0.8em;
@@ -57,6 +58,7 @@ header {
 .header-search input {
     font-size: 0.8em;
     line-height: 0;
+    background: var(--bg-secondary);
 }
 .header-search button:hover {
     background: var(--clr-primary);
@@ -125,7 +127,8 @@ header {
     overflow: auto;
     max-height: 100%;
     margin-bottom: 0;
-    background: var(--bg-primary);
+    /* background: var(--bg-primary); */
+    background: var(--bg-secondary);
     z-index: 2;
     transition: 0.3s;
     pointer-events: none;
@@ -243,7 +246,7 @@ section {
     border: none;
     background: var(--bg-secondary);
 }
-.summary .card {
+.summary .card p {
     color: var(--clr-primary);
 }
 .summary .card-body i {
@@ -265,6 +268,7 @@ section {
     font-size: 0.9em;
     margin-bottom: 0;
     text-align: left;
+    color: var(--text-primary);
 }
 .chart-row-1 img {
     height: 260px;
@@ -373,6 +377,7 @@ section {
 .user-form .card-title {
     font-size: 1em;
     margin-bottom: 0;
+    color: var(--text-primary);
 }
 .user-form .card-header {
     padding: 1.1em 1.25em 1em;
@@ -396,7 +401,8 @@ section {
 }
 .user-form .form-group label {
     font-size: 0.75em;
-    color: #70657b;
+    /* color: #70657b; */
+    color: var(--text-secondary);
     margin-bottom: 4px;
 }
 .user-form label.ul-form__label {
@@ -408,10 +414,14 @@ section {
 .user-form .form-control {
     outline: initial!important;
     background: #f8f9fa;
-    border: 1px solid #ced4da;
-    color: #47404f;
+    background: var(--bg-secondary);
+    border: var(--border-2);
+    color: var(--text-secondary);
     font-size: 0.8em;
     padding: 0.5em 0.9em 0.32em;
+}
+.form-control::placeholder {
+    color: var(--text-secondary);
 }
 .user-form small.ul-form__text {
     /* margin-top: 10px; */

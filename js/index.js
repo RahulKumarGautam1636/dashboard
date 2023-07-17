@@ -45,18 +45,8 @@ $(function() {
         }
     })
 
-    const hueRange = $('#hue');
-    const satRange = $('#sat');
-    const litRange = $('#lit');
-
-    hueRange.change(() => {
-        document.querySelector(':root').style.setProperty('--hue', `${hueRange.val()}deg`);
-    })
-    satRange.change(() => {
-        document.querySelector(':root').style.setProperty('--sat', `${satRange.val()}%`);
-    })
-    litRange.change(() => {
-        document.querySelector(':root').style.setProperty('--lit', `${litRange.val()}%`);
+    $('#tabFade-3').click(function() {
+        $('body').toggleClass('dark-mode');
     })
 })
 

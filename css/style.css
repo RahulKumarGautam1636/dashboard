@@ -19,8 +19,12 @@ body {
     font-size: 0.9em;
     color: var(--text-primary);                     
 }
+a {
+    text-decoration: none;
+}
 .dashboard .dropdown a {
     font-size: 0.8em;
+    color: var(--text-primary);
 }
 /* ----------------------------Header starts----------------------------------------------- */
 header {
@@ -32,7 +36,10 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
+}
+header nav {
+    padding: 0.75em 0;
 }
 
 .header-nav {
@@ -60,19 +67,24 @@ header {
     line-height: 0;
     background: var(--bg-secondary);
 }
+.header-search button {
+    background: hsla(var(--hue), var(--sat), 65%);
+}
+.header-search button i {
+    color: var(--bg-primary);
+}
 .header-search button:hover {
     background: var(--clr-primary);
+    /* opacity: 0.5; */
 }
-.header-search button:hover i {
-    color: white;
-}
+
 .user-dropdown img {
     max-width: 3em;
     border-radius: 50%;
 }
 .h-pill {
     padding: 0.4em;
-    background: var(--text-bg);
+    background: var(--bg-tertiary);
     border-radius: 6px;
 }
 .header-nav i {
@@ -81,8 +93,8 @@ header {
     color: hsla(var(--hue), var(--sat), 65%);
 }
 .brand-logo {
-    max-width: 4.5em;
-    /* border: 1px solid #80808033; */
+    height: 3em;
+    padding: 0 1em;
 }
 
 /* ----------------------------Header ends----------------------------------------------- */
@@ -334,11 +346,17 @@ section {
     margin-bottom: 0;
     font-weight: 600;
 }
+.products-chart li p span {
+    color: var(--text-secondary);
+    opacity: 0.5;
+}
 
 /* .chart-row-3----------------------------------------------- */
 
 .user_table td,
-.user_table th {
+.user_table th,
+.input_table td,
+.input_table th {
     vertical-align: middle;
     border-bottom: var(--border-1);
     color: var(--text-primary);
@@ -363,30 +381,30 @@ section {
 .user-table-card i {
     font-size: 1.3em;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 /* --------------User form starts-------------------------------------- */
 .user-form {
     font-size: 1rem;
 }
-.user-form .card {
+.card {
     box-shadow: var(--bx-shadow-2);    
     border: none;
     background: var(--bg-secondary);
 }
-.user-form .card-title {
+.card-title {
     font-size: 1em;
     margin-bottom: 0;
     color: var(--text-primary);
 }
-.user-form .card-header {
+.card-header {
     padding: 1.1em 1.25em 1em;
     margin-bottom: 0;
     background-color: rgba(0,0,0,.03);
     border-bottom: 1px solid rgba(0,0,0,.125);
 }
-.user-form .card-body {
-    flex: 1 1 auto;
+.card-body {
     padding: 0.65em 1.25em;
 }
 /* .user-form .form-row {
@@ -419,6 +437,7 @@ section {
     color: var(--text-secondary);
     font-size: 0.8em;
     padding: 0.5em 0.9em 0.32em;
+    border-radius: 0.35em;
 }
 .form-control::placeholder {
     color: var(--text-secondary);
@@ -434,8 +453,9 @@ section {
     margin-top: .25em;
 }
 .custom-separator {
-    border-bottom: 1px dashed #ebedf2;
+    border-bottom: 1px dashed var(--text-secondary);
     margin: 0.5em 0 0.3em;
+    opacity: 0.4;
 }
 .input-group-append, .input-group-prepend {
     display: flex;
@@ -457,7 +477,7 @@ span.span-right-input-icon {
     right: 10px;
 }
 .user-form .form-group i {
-    color: #70657b;
+    color: var(--text-primary);
     font-size: 1em;
     font-weight: 600;
 }
@@ -533,12 +553,12 @@ span.ul-form__radio-font {
 .checkbox input:checked~.checkmark, .radio input:checked~.checkmark {
     background-color: var(--clr-primary);
 }
-.user-form .card-footer {
+.card-footer {
     border-top: var(--border-1);
     padding: 1.1em 1.25em 1em;
     background-color: rgba(0,0,0,.03);
 }
-.user-form .card-footer button {
+.card-footer button {
     font-size: 0.94em;
 }
 .input_table {
@@ -566,5 +586,89 @@ span.ul-form__radio-font {
 .user-form .nav-link {
     border: none !important;
     border-radius: 7px !important;
+    border: var(--border-2) !important;
+    color: var(--bg-primary);
 }
 /* --------------User form ends-------------------------------------- */
+
+/* --------------Color modal starts-------------------------------------- */
+.color-modal {
+    position: fixed;
+    top: 13vh;
+    right: 2vh;
+    background: var(--bg-primary);
+    z-index: 10000;
+    padding: 1rem;
+    max-width: 20rem;
+    border: var(--border-1);
+    box-shadow: var(--bx-shadow-2);
+    transform: translateX(105%);
+    transition: transform 0.5s ease-in-out;
+}
+.color-modal > div {
+    background: var(--bg-secondary);
+    font-size: 0.85em;
+    padding: 1em;
+    box-shadow: var(--bx-shadow-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presets {
+    margin-bottom: 0.8em;
+    width: 100%;
+}
+.preset-colors {
+    display: flex;
+    gap: 0.8em;
+    flex-wrap: wrap;
+}
+.presets span {
+    height: 1.5em;
+    width: 1.5em;
+    display: block;
+    border-radius: 50%;
+}
+#panel-toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-104%);
+    background: var(--clr-primary);
+    padding: 0.5em 0.6em;
+    color: white;
+    cursor: pointer;
+    border-radius: 1em 0px 0px 1em;
+}
+#panel-toggler i {
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.color-modal.active {
+    transform: none;
+}
+/* --------------Color modal ends-------------------------------------- */
+
+/* --------------Filter section starts-------------------------------------- */
+.filter-list  {
+    margin-top: 2em;
+}
+.filter-list table {
+    border: var(--border-1);
+}
+.filter-list table td,
+.filter-list table th {
+    text-align: left;
+    padding-left: 1.5em;
+}
+.filter-list table i {
+    font-size: 1.3em;
+}
+.card-title i {
+    cursor: pointer;
+}
+
+
+/* --------------Filter section ends-------------------------------------- */
+

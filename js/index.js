@@ -5,6 +5,10 @@ $(function() {
     const overlay = $('#overlay');
     const menuToggler = $('#menu-toggler');
     const summary = $('.summary');
+    const panelToggler = $('#panel-toggler');
+    const colorPanel = $('.color-modal');
+    const filterToggler = $('#filter-toggler');
+    const filterPanel = $('#filter-panel');
 
     // initial page setup..
     document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);
@@ -45,8 +49,12 @@ $(function() {
         }
     })
 
-    $('#tabFade-3').click(function() {
-        $('body').toggleClass('dark-mode');
+    panelToggler.click(() => {
+        colorPanel.toggleClass('active');
+    })
+
+    filterToggler.click(() => {
+        filterPanel.slideToggle();
     })
 })
 

@@ -2,12 +2,13 @@
     --hue: 270deg;
     --sat: 50%;
     --lit: 40%;
+
     --bg-primary: #fff;
     --bg-secondary: #fff;
+    --bg-tertiary: aliceblue;
 
     --text-primary: #332e38;
     --text-secondary: #47404f;
-    --text-bg: aliceblue;
 
     --clr-primary: #639;
     --clr-primary: hsla(var(--hue), var(--sat), var(--lit));
@@ -26,10 +27,10 @@
 .dark-mode {
     --bg-primary: #333333;
     --bg-secondary: #3c3c3c;
+    --bg-tertiary: rgb(75, 75, 75);
 
     --text-primary: #FFF;
     --text-secondary: #ebebeb;
-    --text-bg: rgb(49, 49, 49);
 
     --clr-primary: #639;
     --clr-primary: hsla(var(--hue), var(--sat), var(--lit));
@@ -38,6 +39,6 @@
 
     --bx-shadow-1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
     --bx-shadow-2: 0 4px 20px 1px rgba(0,0,0,.06), 0 1px 4px rgba(0,0,0,.08);
-    --border-1: 1px solid #ffffffb8;
+    --border-1: 1px solid #ffffff30;
     --border-2: 1px solid #ffffffb8;
 }

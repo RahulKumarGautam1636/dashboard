@@ -19,6 +19,9 @@
     .color-modal {
         font-size: 0.8rem;
     }
+    .filter-section {
+        font-size: 0.8rem;
+    }
     .chart-row-2 .eChart img,
     .chart-row-1 img {
         height: auto;
@@ -37,5 +40,8 @@
     .sidebar {
         font-size: 0.8rem;
         padding-top: 59px;
+    }
+    .btn-list {
+        justify-content: flex-start;
     }
 }

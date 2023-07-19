@@ -5,7 +5,7 @@
 
     --bg-primary: #fff;
     --bg-secondary: #fff;
-    --bg-tertiary: aliceblue;
+    --bg-tertiary: hsla(var(--hue), var(--lit), 97%) !important;
 
     --text-primary: #332e38;
     --text-secondary: #47404f;

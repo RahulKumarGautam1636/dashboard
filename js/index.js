@@ -7,7 +7,7 @@ $(function() {
     const summary = $('.summary');
     const panelToggler = $('#panel-toggler');
     const colorPanel = $('.color-modal');
-    const filterToggler = $('#filter-toggler');
+    const filterToggler = $('.filter-toggler');
     const filterPanel = $('#filter-panel');
 
     // initial page setup..

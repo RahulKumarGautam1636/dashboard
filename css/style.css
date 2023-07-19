@@ -22,9 +22,36 @@ body {
 a {
     text-decoration: none;
 }
+table th {
+    background: var(--bg-tertiary) !important;
+    /* color: hsla(var(--hue), var(--lit), 50%) !important; */
+    color: var(--clr-primary) !important;
+}
+table i {
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: bold;
+}
+.btn-list {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+}
 .dashboard .dropdown a {
     font-size: 0.8em;
     color: var(--text-primary);
+}
+.dropdown-link {
+    font-size: 0.95em;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-top: 0.5em;
+    display: block;
+    cursor: pointer;
+}
+.dropdown-link i {
+    font-size: 1.2em;
+    vertical-align: middle;
 }
 /* ----------------------------Header starts----------------------------------------------- */
 header {
@@ -313,13 +340,39 @@ section {
     margin-bottom: 0.8em;
 }
 .controlled-btn {
+    border: 2px solid hsla(var(--hue), var(--sat), 50%);
     background: hsla(var(--hue), var(--sat), 50%);
-    border: none;
     outline: none;
-    padding: 0.5em 0.6em;
+    padding: 0.5em 1em !important;
     border-radius: 3px;
     font-size: 0.75em;
     color: var(--bg-primary);
+    font-weight: 600;
+}
+.controlled-btn i {
+    color: var(--bg-primary);
+}
+.controlled-btn:hover i {
+    color: var(--clr-primary);
+}
+.controlled-btn:hover {
+    background: var(--bg-primary);
+    color: var(--clr-primary);
+}
+.controlled-outlined-btn,
+.nav-tabs .controlled-btn.active {
+    background: var(--bg-primary);
+    border: 2px solid hsla(var(--hue), var(--sat), 50%);
+    outline: none;
+    padding: 0.5em 1em !important;
+    border-radius: 3px;
+    font-size: 0.75em;
+    color: var(--clr-primary);
+    font-weight: 700;
+}
+.controlled-outlined-btn:hover {
+    color: var(--bg-primary);
+    background: var(--clr-primary);
 }
 .products-chart ul li > div {
     display: flex;
@@ -380,8 +433,6 @@ section {
 }
 .user-table-card i {
     font-size: 1.3em;
-    cursor: pointer;
-    vertical-align: middle;
 }
 
 /* --------------User form starts-------------------------------------- */
@@ -397,6 +448,7 @@ section {
     font-size: 1em;
     margin-bottom: 0;
     color: var(--text-primary);
+    font-weight: 600;
 }
 .card-header {
     padding: 1.1em 1.25em 1em;
@@ -438,6 +490,9 @@ section {
     font-size: 0.8em;
     padding: 0.5em 0.9em 0.32em;
     border-radius: 0.35em;
+}
+select.form-control {
+    cursor: pointer;
 }
 .form-control::placeholder {
     color: var(--text-secondary);
@@ -559,7 +614,7 @@ span.ul-form__radio-font {
     background-color: rgba(0,0,0,.03);
 }
 .card-footer button {
-    font-size: 0.94em;
+    font-size: 0.94em !important;
 }
 .input_table {
     font-size: 0.85em;
@@ -651,22 +706,49 @@ span.ul-form__radio-font {
 /* --------------Color modal ends-------------------------------------- */
 
 /* --------------Filter section starts-------------------------------------- */
-.filter-list  {
+/* .filter-list  {
     margin-top: 2em;
-}
-.filter-list table {
+} */
+/* .filter-list table {
     border: var(--border-1);
-}
+} */
 .filter-list table td,
 .filter-list table th {
     text-align: left;
     padding-left: 1.5em;
 }
 .filter-list table i {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
-.card-title i {
+
+.small-card-footer {
+    font-size: 0.82em;
+    padding-top: 1em;
+    padding-left: 1em;
+}
+.filter-section .card-title i {
+    color: var(--clr-primary);
+    font-size: 1.2em;
+    margin-left: 0.3em;
     cursor: pointer;
+}
+.pagination-row span,
+.pagination-row a {
+    font-size: 0.75em;
+    color: var(--text-primary) !important;
+    background: var(--bg-primary);
+}
+.page-item.active a {
+    background: var(--clr-primary);
+    color: var(--bg-primary) !important;
+    border-color: var(--clr-primary) !important;
+}
+/* .page-link a:hover {
+    color: var(--bg-primary) !important;
+} */
+.disabled>.page-link, .page-link.disabled {
+    background: var(--bg-secondary);
+    opacity: 0.3;
 }
 
 

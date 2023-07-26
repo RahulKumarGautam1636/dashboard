@@ -56,5 +56,36 @@ $(function() {
     filterToggler.click(() => {
         filterPanel.slideToggle();
     })
+    
 })
 
+
+
+var parent = document.querySelector('#parent');
+const clr = getComputedStyle(document.body).getPropertyValue('--clr-primary');
+var clr1 = clr.replace('deg', '');
+
+var picker = new Picker({
+    parent: parent,
+    color: clr1,
+    popup: false
+});
+
+picker.onChange = function(color) {
+    parent.style.background = color.rgbaString;
+    const hue = color.hsla[0] * 360;
+    const sat = color.hsla[1] * 100;
+    const lit = color.hsla[2] * 100;
+    setRootColors(hue, sat, lit);
+};
+
+function setRootColors(hue, sat, lit) {
+    document.querySelector(':root').style.setProperty('--hue', `${hue}deg`);
+    document.querySelector(':root').style.setProperty('--sat', `${sat}%`);
+    document.querySelector(':root').style.setProperty('--lit', `${lit}%`);
+    picker.setColor(`hsl(${hue}, ${sat}%, ${lit}%)`, true);
+}
+
+function toggleDarkMode() {
+    $('body').toggleClass('dark-mode');
+}

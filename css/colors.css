@@ -12,7 +12,7 @@
 
     --clr-primary: #639;
     --clr-primary: hsla(var(--hue), var(--sat), var(--lit));
-    --clr-secondary: #ffc107;
+    --clr-secondary: hsl(41.65deg 100% 50%);
     --clr-tertiary: #f44336;
 
     --bx-shadow-1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);
@@ -34,7 +34,7 @@
 
     --clr-primary: #639;
     --clr-primary: hsla(var(--hue), var(--sat), var(--lit));
-    --clr-secondary: #ffc107;
+    --clr-secondary: hsl(41.65deg 100% 50%);
     --clr-tertiary: #f44336;
 
     --bx-shadow-1: 0 1px 15px rgba(0,0,0,.04), 0 1px 6px rgba(0,0,0,.04);

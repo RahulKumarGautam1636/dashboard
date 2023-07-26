@@ -26,6 +26,7 @@ table th {
     background: var(--bg-tertiary) !important;
     /* color: hsla(var(--hue), var(--lit), 50%) !important; */
     color: var(--clr-primary) !important;
+    border-bottom: 2px solid var(--clr-secondary) !important;
 }
 table i {
     cursor: pointer;
@@ -37,9 +38,16 @@ table i {
     gap: 1em;
     justify-content: flex-end;
 }
+.dashboard .dropdown-menu {
+    background: var(--bg-primary);
+    border: var(--border-2);
+}
 .dashboard .dropdown a {
     font-size: 0.8em;
     color: var(--text-primary);
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    background: var(--bg-tertiary);
 }
 .dropdown-link {
     font-size: 0.95em;
@@ -58,7 +66,7 @@ header {
     font-size: 1rem;
     box-shadow: var(--bx-shadow-1);
     padding: 0 2vw;
-    z-index: 1111;
+    z-index: 111;
     position: fixed;
     top: 0;
     left: 0;
@@ -286,7 +294,7 @@ section {
     background: var(--bg-secondary);
 }
 .summary .card p {
-    color: var(--clr-primary);
+    color: hsla(var(--hue), var(--sat), 60%);
 }
 .summary .card-body i {
     font-size: 3.4em;
@@ -298,6 +306,7 @@ section {
 }
 .summary .card .content p:last-child {
     font-size: 1.3em;
+    font-weight: bold;
 }
 
 .chart-row-1 .card {
@@ -309,8 +318,9 @@ section {
     text-align: left;
     color: var(--text-primary);
 }
-.chart-row-1 img {
+.chart-row-1 svg {
     height: 260px;
+    max-width: 100%;
 }
 
 /* ------------------------------------home section starts-------------------------------- */
@@ -324,8 +334,7 @@ section {
 .eChart p:last-child {
     font-size: 1.3em;
 }
-.chart-row-2 .eChart img {
-    height: 225px;
+.chart-row-2 .eChart svg {
     width: 100%;
 }
 
@@ -335,9 +344,10 @@ section {
     justify-content: space-between;
     gap: 1em;
     white-space: nowrap;
+    padding: 0.4em 0;
 }
 .products-chart ul li:not(:last-child) {
-    margin-bottom: 0.8em;
+    border-bottom: var(--border-1);
 }
 .controlled-btn {
     border: 2px solid hsla(var(--hue), var(--sat), 50%);
@@ -508,9 +518,9 @@ select.form-control {
     margin-top: .25em;
 }
 .custom-separator {
-    border-bottom: 1px dashed var(--text-secondary);
+    border-bottom: 1px dashed var(--clr-primary);
     margin: 0.5em 0 0.3em;
-    opacity: 0.4;
+    opacity: 1;
 }
 .input-group-append, .input-group-prepend {
     display: flex;
@@ -743,14 +753,8 @@ span.ul-form__radio-font {
     color: var(--bg-primary) !important;
     border-color: var(--clr-primary) !important;
 }
-/* .page-link a:hover {
-    color: var(--bg-primary) !important;
-} */
 .disabled>.page-link, .page-link.disabled {
     background: var(--bg-secondary);
     opacity: 0.3;
 }
-
-
 /* --------------Filter section ends-------------------------------------- */
-

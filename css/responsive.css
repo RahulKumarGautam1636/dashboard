@@ -23,7 +23,7 @@
         font-size: 0.8rem;
     }
     .chart-row-2 .eChart img,
-    .chart-row-1 img {
+    .chart-row-1 svg {
         height: auto;
     }
 

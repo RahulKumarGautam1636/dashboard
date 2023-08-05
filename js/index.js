@@ -83,7 +83,39 @@ function setRootColors(hue, sat, lit) {
     document.querySelector(':root').style.setProperty('--hue', `${hue}deg`);
     document.querySelector(':root').style.setProperty('--sat', `${sat}%`);
     document.querySelector(':root').style.setProperty('--lit', `${lit}%`);
+    const bgTertiary = getComputedStyle(document.body).getPropertyValue('--bg-tertiary');
+    const bgPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary');
+
     picker.setColor(`hsl(${hue}, ${sat}%, ${lit}%)`, true);
+
+    const pieChartOptions = {
+        color: [`hsla(${hue}deg, ${sat}%, 40%)`, `hsla(${hue}deg, ${sat}%, 45%)`, `hsla(${hue}deg, ${sat}%, 50%)`, `hsla(${hue}deg, ${sat}%, 55%)`, `hsla(${hue}deg), ${sat}%, 60%)`, `hsla(${hue}deg), ${sat}%, 65%)`],
+    }
+    const eChartBarOptions = {
+        series: [{
+            color: `hsla(${hue}deg, ${sat}%, 85%)`
+        }, {
+           color: `hsla(${hue}deg, ${sat}%, 50%)` 
+        }]
+    }
+    const lineChart1Options = {
+        series: [{
+            areaStyle: {
+                color: bgTertiary,
+            },
+            lineStyle: {
+                color: `hsla(${hue}deg, ${sat}%, 65%)`
+            },
+            itemStyle: {
+                color: bgPrimary
+            }
+        }]
+    }
+    
+    eChartPie.setOption(pieChartOptions);
+    eChartBar.setOption(eChartBarOptions);
+    lineChart1.setOption(lineChart1Options);
+    // lineChart2.setOption(lineChart2Options);
 }
 
 function toggleDarkMode() {

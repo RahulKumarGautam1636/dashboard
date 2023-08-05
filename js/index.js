@@ -56,6 +56,20 @@ $(function() {
     filterToggler.click(() => {
         filterPanel.slideToggle();
     })
+
+    $('#nested-side-menu li .menu-toggler').click(function() {
+        const target = $(this).parent().next('.menu-wrapper');
+        const parent = $(this).parent().parent('.menu-wrapper');
+        const parents = $(this).parent().parents('.menu-wrapper');
+        console.log(target.css('max-height'));
+        if (target.css('max-height') === '0px') {
+            target.css('max-height', target.children('ul').outerHeight() + 'px');
+            parents.css('max-height', '+=' + target.children('ul').outerHeight() + 'px');
+        } else {
+            target.css('max-height', 0);
+            parent.css('max-height', 0);
+        }
+    })
     
 })
 

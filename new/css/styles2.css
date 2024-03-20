@@ -1,0 +1,238 @@
+body {
+    background: var(--bg-primary-2);
+}
+section.home {
+    padding: 1em 1.6em 2vw;
+}
+/* sidebar start */
+.sidebar ul {
+    background: var(--bg-primary-2);
+}
+.sidebar .side-menu {
+    padding: 1em 0em 1em 1em;
+    box-shadow: none;
+}
+.side-menu li {
+    padding: 1.5em 1.5em 0.8em;
+    gap: 0.7em;
+    flex-direction: row;
+    background: #7163ba;
+    border-bottom: var(--border-1);
+    color: var(--text-secondary);
+}
+.side-menu > li:first-child {
+    border-radius: var(--bRadius) var(--bRadius) 0 0;
+}
+.side-menu > li:last-child {
+    border-radius: 0 0 var(--bRadius) var(--bRadius);
+}
+.side-menu > li > span {
+    font-size: 0.73em;
+    display: none;
+    color: white;
+    z-index: 2;
+}
+.sidebar:hover .side-menu > li > span {
+    display: initial;
+}
+.side-menu li i {
+    font-size: 1.8em;
+    color: white;
+    z-index: 1;
+}
+.side-menu > li.active::before {
+    inset: 1em;
+    height: 2.7em;
+    width: auto;
+    background: hsl(251.61deg 53.55% 37.02%);
+    border-radius: 0.6em;
+    z-index: 0;
+    clip-path: none;
+}
+/* sidebar start */
+
+.heading--float {
+    font-size: 0.85em;
+}
+.home .heading--float {
+    font-size: 0.85em;
+    border-bottom: none;
+    padding-bottom: 1.1em;
+}
+.heading--float h5 {
+    font-size: 0.8em;
+}
+.heading--float h2 {    
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.card.card-dark {
+    background: var(--clr-primary-2);
+}
+.card.card-dark .chart-title {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.summary .card-body {
+    padding: 1.5em 1.3em;
+}
+.summary.summary-dark .card {
+    background: var(--clr-primary-2);
+    text-align: left;
+}
+.summary .card .content p:first-child {
+    font-size: 0.8em;
+    color: #e9e9e9;
+}
+.summary.summary-dark .card .content p:last-child {
+    font-size: 1.5em;
+    color: white;
+}
+.home .card {
+    border-radius: var(--bRadius);
+}
+
+.summary .card.collapseble-card {
+    background: #ea5f8c;
+}
+.collapseble-card .top-section {
+    border-radius: var(--bRadius);
+    background: #fe83ab;
+}
+.summary .card-body i {
+    color: white;
+}
+
+.sec-toggler {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+.sec-toggler > i {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.sec-toggler p {
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+.sec-toggler span {
+    margin-left: auto;
+    font-size: 0.75em;
+    color: #7163ba;
+}
+
+.tab-toggler {
+    padding: 0.7em 0.8em;
+    background: #efefef;
+    border-radius: var(--bRadius);
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+.tab-toggler .controlled-btn {
+    border-radius: var(--bRadius);
+}
+.tab-toggler .controlled-btn.active {
+    box-shadow: var(--bx-shadow-2);    
+}
+
+.select-1 {
+    background: var(--bg-primary2);
+    border: 1px solid #ababab;
+    border-radius: var(--bRadius);
+    font-size: 0.85em;
+    padding: 0.2em 0.6em;
+    color: white;
+    outline: none;
+}
+
+.users-list .card-body {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.users-list ul {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+.users-list ul li:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+.users-list ul .list-card {
+    display: flex;
+    gap: 1em;
+    align-items: flex-start;
+    font-size: 0.95em;
+}
+.list-card img {
+    font-size: 0.75em;
+    max-height: 3rem;
+}
+.list-card > div {
+    text-align: left;
+    line-height: 1.2em;
+}
+.list-card h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--text-primary-2);
+
+}
+.list-card p {
+    margin: 2px 0 0;
+    font-size: 0.75em;
+}
+.list-card span {
+    font-size: 0.7em;
+}
+.list-card i {
+    font-size: 1.4em;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.card-type-1 {
+    margin-top: 3em;
+    padding-top: 3em;
+    min-height: 13rem;
+    padding-bottom: 0.9em;
+}
+.icon-type-1 {
+    font-size: 2.9em;
+    padding: 0.38em;
+    background: var(--clr-primary-2);
+    border-radius: 0.6em;
+    border: 1px solid #5d4ea9;
+    color: white;
+    box-shadow: var(--bx-clrShadow-1);
+}
+.float-center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.card-type-1 .card-title {
+    font-size: 1.1em;
+    font-weight: 800;
+    color: var(--text-primary-2);
+    margin: 0.35em 0 0.3em;
+}
+.card-type-1 .table-responsive {
+    height: 9em;
+}
+.card-type-1 table {
+    font-weight: 600;
+    font-size: 0.78em;
+}

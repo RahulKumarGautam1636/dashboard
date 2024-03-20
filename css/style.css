@@ -790,3 +790,8 @@ span.ul-form__radio-font {
     right: 10%;
     margin-right: 0 !important;
 }
+.resizeble-cols > th {
+    resize: both;
+    white-space: normal;
+    overflow: auto;
+}

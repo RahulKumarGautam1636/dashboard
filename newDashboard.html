@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/icofont/icofont.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./new/css/styles2.css">
+    <link rel="stylesheet" href="./css/responsive.css"> 
+    <link rel="stylesheet" href="./css/animation.css">
+    <title>Dashboard</title>
+</head>
+<body class="dashboard">
+    <header>
+        <nav>
+            <ul class="header-nav">
+                <li>
+                    <div class="toggler-box d-flex align-items-center">
+                        <!-- <img class="brand-logo logo" src="img/logo.svg" alt="logo"> -->
+                        <!-- <svg class="brand-logo logo" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="400" fill="var(--bg-secondary)"/>
+                            <path d="M251.468 93.4881C279.468 102.191 295.468 134.655 298.968 149.488L254.468 158.488C246.468 124.488 209.135 122.321 191.468 125.488C176.135 126.655 144.868 141.788 142.468 192.988C140.068 244.188 165.135 265.655 177.968 269.988C210.368 285.588 244.135 268.488 256.968 257.988V229.488H206.468V192.988H301.968V279.988C268.968 314.988 173.468 332.488 128.468 284.988C83.4682 237.488 92.4682 149.488 128.468 114.988C164.468 80.4881 213.468 81.6772 251.468 93.4881Z" fill="var(--clr-primary)"/>
+                        </svg> -->
+                        <svg class="brand-logo logo" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="74.38" cy="74.2227" r="73.4891" fill="var(--clr-primary)"/>
+                            <circle cx="73.5556" cy="74.6983" r="49.105" fill="hsla(var(--hue), var(--sat), 36%)"/>
+                            <path d="M112.189 25.1337L95.2884 25.1337C92.2248 25.1337 82.4456 24.6743 70.7797 25.1337C56.6587 25.6898 46.3554 31.9564 38.1805 39.8393C30.0057 47.7222 20.517 62.904 24.3125 84.363C28.108 105.822 45.1876 118.96 58.1797 122.61C71.1719 126.259 89.4194 127.135 107.667 110.785C122.265 97.7056 123.601 77.1291 122.445 68.4759H73.5166C70.5378 68.6066 64.4705 70.7027 64.0314 78.0415C63.5924 85.3804 70.1719 88.1001 73.5166 88.5426H99.5128C91.9502 104.011 77.9364 105.3 71.3681 105.3C61.4056 105.3 42.536 96.7496 43.2235 74.5777C43.911 52.4057 62.273 45.7169 71.3681 45.144H112.189C115.626 45.2872 122.501 43.5971 122.501 35.6908C122.501 27.7845 115.626 25.2053 112.189 25.1337Z" fill="white"/>
+                            <circle cx="112.918" cy="35.1902" r="10" fill="#FFB100"/>
+                            <circle cx="73.5556" cy="78.5115" r="10" fill="#FFB100"/>
+                        </svg>
+                        <span id="menu-toggler"><i class='bx bx-menu'></i></span>
+                    </div>
+                </li>
+                <!-- <li class="d-none d-md-block">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary btn-sm dropdown-toggle bg-transparent border-0" href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false">Mega menu</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownLink">
+                            <a href="#" class="dropdown-item">First item</a>
+                            <a href="#" class="dropdown-item">Second item</a>
+                            <a href="#" class="dropdown-item">Third item</a>
+                        </div>
+                    </div>
+                </li> -->
+                <li class="d-none d-md-block ms-auto">
+                    <div class="input-group header-search">
+                        <input type="text" class="form-control border-0" placeholder="Search" aria-label="Amount (to nearest dollar)">
+                        <button class="input-group-text border-0"><i class='bx bx-search'></i></button>
+                    </div>
+                </li>
+                <!-- <li>
+                    <a class="h-pill" href="#"><i class='bx bx-cross'></i></a>
+                </li>
+                <li>
+                    <a class="h-pill" href="#"><i class='bx bx-box'></i></a>
+                </li>
+                <li>
+                    <a class="h-pill position-relative" href="#">
+                        <i class='bx bx-bell'>
+                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size: 0.55em; font-family: 'Nunito'; background: #e44dff; display: block;">2</span>
+                        </i>
+                    </a>
+                </li> -->
+                <li>
+                    <div class="dropdown user-dropdown">
+                        <a href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/user.jpg" alt="user"></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownLink">
+                            <a href="#" class="dropdown-item">First item</a>
+                            <a href="#" class="dropdown-item">Second item</a>
+                            <a href="#" class="dropdown-item">Third item</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <sidebar class="sidebar">
+        <ul class="side-menu active" id="side-menu">
+            <li side-parent="1">
+                <i class="icofont-duotone icofont-dashboard"></i><span> Dashboard</span>
+            </li>
+            <li side-parent="2">
+                <i class="icofont-dashboard-web"></i><span> Masters</span>
+            </li>
+            <li side-parent="3">
+                <i class="icofont-sign-in" style='transform: rotateY(180deg);'></i><span> Inward</span>
+            </li>
+            <li side-parent="4">
+                <i class="icofont-sign-out"></i><span> Outward</span>
+            </li>
+            <li side-parent="5">
+                <i class="icofont-duotone icofont-privacy"></i><span> Accounts</span>
+            </li>
+            <li side-parent="6">
+                <i class='bx bx-briefcase'></i><span> Inventory</span>
+            </li>
+            <li side-parent="7">
+                <i class="icofont-ui-file"></i><span> Reports</span>
+            </li>
+            <li side-parent="7">
+                <i class="icofont-ui-file"></i><span> Reports</span>
+            </li>
+            <li side-parent="8">
+                <i class="icofont-money"></i><span> GSTR</span>
+            </li>
+        </ul>
+
+        <ul class="nested-side-menu" id="nested-side-menu">
+            <li side-child="1">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="2">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Designs</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="3">
+                <ul>
+                    <li><a href="#"><i class="icofont-listing-box"></i></a><a href="/Inwards/NewPurchase"> <span>Purchase Bill</span></a> <i class='menu-toggler bx bxs-down-arrow'></i></li>
+                    <div class="menu-wrapper">
+                        <ul>
+                            <li><i class='bx bxs-certification'></i> <span>Level 2</span></li>
+                            <li><i class='bx bxs-certification'></i> <span>Level 2</span> <i class='menu-toggler bx bxs-down-arrow'></i></li>
+                            <div class="menu-wrapper">
+                                <ul>
+                                    <li><i class='bx bxs-certification'></i> <span>Level 3</span></li>
+                                    <li><i class='bx bxs-certification'></i> <span>Level 3</span></li>
+                                </ul>
+                            </div>
+                            <li><i class='bx bxs-certification'></i> <span>Level 2</span></li>
+                        </ul>
+                    </div>
+                    <li><i class='bx bxs-certification'></i> <span>Alerts</span></li>
+                    <li><i class='bx bxs-certification'></i> <span>Alerts</span></li>
+                    <li><i class='bx bxs-certification'></i> <span>Alerts</span></li>
+                    <li><i class='bx bxs-certification'></i> <span>Alerts</span> <i class='menu-toggler bx bxs-down-arrow'></i></li>
+                    <div class="menu-wrapper">
+                        <ul>
+                            <li><i class='bx bxs-certification'></i> <span>Level 2</span></li>
+                            <li><i class='bx bxs-certification'></i> <span>Level 2</span> <i class='menu-toggler bx bxs-down-arrow'></i></li>
+                            <div class="menu-wrapper">
+                                <ul>
+                                    <li><i class='bx bxs-certification'></i> <span>Level 3</span></li>
+                                    <li><i class='bx bxs-certification'></i> <span>Level 3</span></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                    <li><i class='bx bxs-certification'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="4">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="5">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="6">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="7">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+            <li side-child="8">
+                <ul>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                    <li><i class='bx bx-bell'></i> <span>Alerts</span></li>
+                </ul>
+            </li>
+        </ul>
+    </sidebar>
+
+    <main id="main-content-wrapper">
+        <section id="home" class="home">
+            <div class="heading heading--float">
+                <h5>Primary</h5>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="row chart-row-1 gy-3">
+                <div class="col-12 col-md-9">
+                    <div class="row gy-3">
+                        <div class="col-12 col-md-8">
+                            <div class="card border-0 card-dark h-100">
+                                <div class="card-body">
+                                    <div class="chart-label d-flex justify-content-between mb-2 align-items-end">
+                                        <p class="chart-title">Sales Overview</p>
+                                        <select class="select-1" name="chart-period" id="">
+                                            <option value="monthly">Monthly</option>
+                                            <option value="weekly">Weekly</option>
+                                            <option value="yearly">Yearly</option>
+                                        </select>
+                                    </div>
+                                    <div id="eChartBar" style="height: 260px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 summary summary-dark">
+                            <div class="card">
+                                <div class="card-body d-flex align-items-center">
+                                    <i class='bx bx-gift'></i>
+                                    <div class="content ms-4">
+                                        <p class="mb-0">Sales</p>
+                                        <p class="mb-0">Sales Order</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-3 collapseble-card">
+                                <div class="card-body d-flex align-items-center top-section">
+                                    <i class='bx bx-news'></i>
+                                    <div class="content ms-4">
+                                        <p class="mb-0">Work</p>
+                                        <p class="mb-0">Work Status</p>
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex align-items-center drop-card">
+                                    <div class="content d-flex justify-content-between align-items-center w-100">
+                                        <div class="">
+                                            <p class="mb-0">Total Time</p>
+                                            <p class="mb-0">748 hr</p>
+                                        </div>
+                                        <i class='bx bx-caret-right-circle' style="font-size: 2.6em"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-center">
+                            <div class="card border-0 card-type-1">
+                                <div class="card-body">
+                                    <i class='bx bx-cube-alt icon-type-1 float-center'></i>
+                                    <!-- <i class='bx bx-test-tube icon-type-1 float-center'></i> -->
+                                    <h3 class="card-title">METAL</h3>
+                                    <p class="chart-title text-center">Total: 15</p>
+                                    <div class="table-responsive">
+                                        <table class="table user_table text-start mb-0" id="draggable-table">           
+                                            <tbody>
+                                                <tr>
+                                                    <td>Smith Doe</td>
+                                                    <td class="text-end">1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jhon Doe</td>
+                                                    <td class="text-end">2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alex</td>
+                                                    <td class="text-end">3</td>
+                                                </tr>
+            
+                                                <tr>
+                                                    <td>Mathew Doe</td>
+                                                    <td class="text-end">4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card border-0 card-type-1">
+                                <div class="card-body">
+                                    <i class='bx bxl-sketch icon-type-1 float-center'></i>
+                                    <!-- <i class='bx bxs-capsule icon-type-1 float-center'></i> -->
+                                    <h3 class="card-title">DIAMOND</h3>
+                                    <p class="chart-title text-center">Total: 16</p>
+                                    <div class="table-responsive">
+                                        <table class="table user_table text-start mb-0" id="draggable-table">           
+                                            <tbody>
+                                                <tr>
+                                                    <td>Smith Doe</td>
+                                                    <td class="text-end">1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jhon Doe</td>
+                                                    <td class="text-end">2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alex</td>
+                                                    <td class="text-end">3</td>
+                                                </tr>
+            
+                                                <tr>
+                                                    <td>Mathew Doe</td>
+                                                    <td class="text-end">4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card border-0 card-type-1">
+                                <div class="card-body">
+                                    <i class='bx bxs-color-fill icon-type-1 float-center'></i>
+                                    <!-- <i class='bx bxs-user-plus icon-type-1 float-center'></i> -->
+                                    <h3 class="card-title">COLOR STONE</h3>
+                                    <p class="chart-title text-center">Total: 20</p>
+                                    <div class="table-responsive">
+                                        <table class="table user_table text-start mb-0" id="draggable-table">           
+                                            <tbody>
+                                                <tr>
+                                                    <td>Smith Doe</td>
+                                                    <td class="text-end">1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jhon Doe</td>
+                                                    <td class="text-end">2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alex</td>
+                                                    <td class="text-end">3</td>
+                                                </tr>
+            
+                                                <tr>
+                                                    <td>Mathew Doe</td>
+                                                    <td class="text-end">4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3">
+                    <div class="card border-0 users-list h-100">
+                        <div class="card-body">
+                            <div class="sec-toggler">
+                                <i class='bx bx-menu'></i>
+                                <p class="chart-title">Members</p>
+                                <span class="chart-title"><a href="./index.html">View all</a></span>
+                            </div> 
+                            <div class="tab-toggler">
+                                <button class="controlled-btn border-0 active">Activities</button>
+                                <button class="controlled-btn border-0 bg-transparent text-dark">Online</button>
+                            </div>  
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Max Stone</h4>
+                                            <p>Weekly Bicycle</p>
+                                            <span>10 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Grisha Jack</h4>
+                                            <p>Morning Swift</p>
+                                            <span>26 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Levi Pattrick</h4>
+                                            <p>Slow Jogging</p>
+                                            <span>32 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Cody Bryan</h4>
+                                            <p>Quick Sprint</p>
+                                            <span>37 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Grisha Jack</h4>
+                                            <p>Morning Swift</p>
+                                            <span>26 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-card">
+                                        <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+                                        <div>
+                                            <h4>Levi Pattrick</h4>
+                                            <p>Slow Jogging</p>
+                                            <span>32 min ago</span>
+                                        </div>
+                                        <i class='bx bx-envelope ms-auto my-auto'></i>
+                                    </div>
+                                </li>
+                            </ul>                         
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row chart-row-2 pt-3 pt-lg-4 gy-3">
+                <div class="col-12 col-md-6">
+                    <div class="row gy-3">
+                        <div class="col-12 col-md-6">
+                            <div class="card border-0 eChart">
+                                <div class="card-body">
+                                    <p class="mb-0">Last Month Sales</p>
+                                    <p style="color: var(--clr-primary)" class="mb-0">$40250</p>
+                                </div>
+                                <div class="cart-box">
+                                    <!-- <svg viewBox="0 0 305 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1" fill="var(--bg-secondary)"/>
+                                        <path d="M74 173.5C52.8 141.1 16.5 162.667 1 177.5V235.5H304.5V54C282.9 54 263.167 67.6667 256 74.5C242.8 82.5 231.167 115.167 227 130.5C221.167 146.833 203.1 172.6 177.5 145C151.9 117.4 130.5 156.5 123 179.5C105.4 217.5 83 191.333 74 173.5Z" fill="var(--bg-tertiary)"/>
+                                        <path d="M1 177.5C16.5 162.667 52.8 141.1 74 173.5C83 191.333 105.4 217.5 123 179.5C130.5 156.5 151.9 117.4 177.5 145C203.1 172.6 221.167 146.833 227 130.5C231.167 115.167 242.8 82.5 256 74.5C263.167 67.6667 282.9 54 304.5 54" stroke="hsla(var(--hue), var(--sat), 65%)" stroke-width="2"/>
+                                        <circle cx="51.5" cy="157" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="102.5" cy="199" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="154.5" cy="136" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="205.5" cy="156" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="256.5" cy="74" r="3.5" fill="var(--clr-primary)"/>
+                                    </svg> -->
+                                    <div id="line-chart-1" style="width: 100%;height:225px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="card border-0 eChart">
+                                <div class="card-body">
+                                    <p class="mb-0">Last Week Sales</p>
+                                    <p class="mb-0" style="color: var(--clr-secondary);">$10250</p>
+                                </div>
+                                <div class="cart-box">
+                                    <!-- <svg viewBox="0 0 305 236" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1" fill="var(--bg-secondary)"/>
+                                        <path d="M74 173.5C52.8 141.1 16.5 162.667 1 177.5V235.5H304.5V54C282.9 54 263.167 67.6667 256 74.5C242.8 82.5 231.167 115.167 227 130.5C221.167 146.833 203.1 172.6 177.5 145C151.9 117.4 130.5 156.5 123 179.5C105.4 217.5 83 191.333 74 173.5Z" fill="var(--bg-tertiary)"/>
+                                        <path d="M1 177.5C16.5 162.667 52.8 141.1 74 173.5C83 191.333 105.4 217.5 123 179.5C130.5 156.5 151.9 117.4 177.5 145C203.1 172.6 221.167 146.833 227 130.5C231.167 115.167 242.8 82.5 256 74.5C263.167 67.6667 282.9 54 304.5 54" stroke="hsla(var(--hue), var(--sat), 65%)" stroke-width="2"/>
+                                        <circle cx="51.5" cy="157" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="102.5" cy="199" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="154.5" cy="136" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="205.5" cy="156" r="3.5" fill="var(--clr-primary)"/>
+                                        <circle cx="256.5" cy="74" r="3.5" fill="var(--clr-primary)"/>
+                                    </svg> -->
+                                    <div id="line-chart-2" style="width: 100%;height:225px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 products-chart">
+                        <div class="card-body">
+                            <p style="margin-bottom: 0.8em;">Top selling products</p>
+                            <div>
+                                <ul class="list-inline mb-0 overflow-auto">
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button class="controlled-btn border-0" type="button">View Details</button>
+                                    </li>
+                                    <li> 
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button class="controlled-btn border-0" type="button">View Details</button>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button class="controlled-btn border-0" type="button">View Details</button>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/headphone-4.jpg" alt="headphone">
+                                            <div>
+                                                <h5>Wireless Headphone E23</h5>
+                                                <h6>Lorem ipsum dolor sit amet consectetur.</h6>
+                                                <p>$450 <span class="text-decoration-line-through">$550</span></p>
+                                            </div>
+                                        </div>
+                                        <button class="controlled-btn border-0" type="button">View Details</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row chart-row-3 pt-3 pt-lg-4 gy-3">
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 user-table-card">
+                        <div class="card-header bg-transparent">
+                            <p class="mb-0">New Users</p>
+                            <div class="dropdown">
+                                <a href="#" id="user_table_dropdown" data-bs-toggle="dropdown" aria-expanded="false"><i class='bx bx-cog align-middle'></i></a>
+                                <div class="dropdown-menu" aria-labelledby="user_table_dropdown">
+                                    <a href="#" class="dropdown-item">Add new user</a>
+                                    <a href="#" class="dropdown-item">View all user</a>
+                                    <a href="#" class="dropdown-item">Something else here</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table user_table" id="draggable-table">
+                                <thead>
+                                    <tr>
+                                        <th draggable="true" scope="col">#</th>
+                                        <th draggable="true" scope="col">Name</th>
+                                        <th draggable="true" scope="col">Avatar</th>
+                                        <th draggable="true" scope="col">Email</th>
+                                        <th draggable="true" scope="col">Status</th>
+                                        <th draggable="true" scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <script>
+                                    var dragCol = null;
+                                    function handleDragStart(e) {
+                                        dragCol = this;
+                                        e.dataTransfer.efferAllowed = 'move';
+                                        e.dataTransfer.setData('text/html', this.outerHTML);
+                                    }
+                                    function handleDragOver(e) {
+                                        if (e.preventDefault) {
+                                            e.preventDefault();
+                                        }
+                                        e.dataTransfer.dropEffect = 'move';
+                                        return false;
+                                    }
+                                    function handleDrop(e) {
+                                        if (e.stopPropagation) {
+                                            e.stopPropagation();
+                                        }
+                                        if (dragCol !== this) {
+                                            var sourceIndex = Array.from(dragCol.parentNode.children).indexOf(dragCol);
+                                            var targetIndex = Array.from(this.parentNode.children).indexOf(this);
+                                            var table = document.getElementById('draggable-table');
+                                            var rows = table.rows;
+                                            for (var i=0; i<rows.length; i++) {
+                                                var sourceCell = rows[i].cells[sourceIndex];
+                                                var targetCell = rows[i].cells[targetIndex];
+                                                var tempHTML = sourceCell.innerHTML;
+                                                sourceCell.innerHTML = targetCell.innerHTML;
+                                                targetCell.innerHTML = tempHTML;
+                                            }
+                                        }
+                                        return false;
+                                    }
+                                    var cols = document.querySelectorAll('#draggable-table th');
+                                    console.log(cols);
+                                    [].forEach.call(cols, function(col) {
+                                        col.addEventListener('dragstart', handleDragStart, false);
+                                        col.addEventListener('dragover', handleDragOver, false);
+                                        col.addEventListener('drop', handleDrop, false);
+                                    })
+                                </script>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Smith Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Smith@gmail.com</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jhon Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Jhon@gmail.com</td>
+                                        <td><span class="badge bg-info">Pending</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Alex</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Otto@gmail.com</td>
+                                        <td><span class="badge bg-warning">Not Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Mathew Doe</td>
+                                        <td>
+
+                                            <img class="rounded-circle m-0 avatar-sm-table " src="./img/user.jpg" alt="user">
+
+                                        </td>
+
+                                        <td>Mathew@gmail.com</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent">
+                            <h3 class="card-title">Alert Types</h3>
+                        </div>
+                        <div class="card-body">
+                            <button type="button" class="controlled-btn bg-success btn-block border-0 mb-3" id="alert-success">Success Alert</button>
+                            <button type="button" class="controlled-btn bg-info btn-block border-0 mb-3" id="alert-info">Info Alert</button>
+                            <button type="button" class="controlled-btn bg-warning btn-block border-0 mb-3" id="alert-warning">Warning Alert</button>
+                            <button type="button" class="controlled-btn bg-danger btn-block border-0 mb-3" id="alert-error">Error Alert</button>
+                            <button type="button" class="controlled-btn bg-primary btn-block border-0 mb-3" id="alert-question">Ask Question</button>
+                            <button type="button" class="controlled-btn bg-info btn-block border-0 mb-3" id="alert-confirm">Get Confirmation</button>
+                            <button type="button" class="controlled-btn bg-warning btn-block border-0 mb-3" id="alert-img">Alert Image</button>
+                            <button type="button" class="controlled-btn bg-primary btn-block border-0 mb-3" id="alert-custom-styles">Custom Styles</button>
+                            <button type="button" class="controlled-btn bg-success btn-block border-0 mb-3" id="alert-auto-close">Auto Close</button>
+                            <button type="button" class="controlled-btn bg-info btn-block border-0 mb-3" id="alert-input-box">Ajax Handler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row user-form">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent">
+                            <h3 class="card-title"> 3 Columns Form Layout</h3>
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                        <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your full name
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail12" class="ul-form__label">Contact Number:</label>
+                                        <input type="text" class="form-control" id="inputEmail12" placeholder="Enter Contact Number">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your contact number
+                                        </small>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail13" class="ul-form__label">Username:</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text bg-transparent">
+                                                    <i class='bx bxs-user'></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your username
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="custom-separator"></div>
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputtext14" class="ul-form__label">Contact:</label>
+                                        <input type="text" class="form-control" id="inputtext14" placeholder="Enter contact number ">
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your contact
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail15" class="ul-form__label">Fax:</label>
+                                        <div class="input-right-icon">
+                                            <input type="text" class="form-control" id="inputEmail15" placeholder="Fax Number">
+                                            <span class="span-right-input-icon">
+                                                <i class='bx bx-info-circle'></i>
+                                            </span>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your Fax
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4 mr-2">
+                                        <label for="inputEmail17" class="ul-form__label">Postcode:</label>
+                                        <div class="input-right-icon">
+                                            <input type="text" class="form-control" id="inputEmail17" placeholder="Enter your postcode">
+                                            <span class="span-right-input-icon">
+                                                <i class='bx bx-mail-send'></i>
+                                            </span>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your postcode
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="custom-separator"></div>
+                                <div class="row form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputEmail16" class="ul-form__label">Address:</label>
+                                        <div class="input-right-icon">
+                                            <textarea class="form-control" placeholder="Write your message here" rows="3" aria-label="Message" aria-describedby="textarea"></textarea>
+                                            <span class="span-right-input-icon" style="top: 27%">
+                                                <i class='bx bxs-map'></i>
+                                            </span>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please enter your address
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="inputEmail18" class="ul-form__label">User Group:</label>
+                                        <div class="ul-form__radio-inline">
+                                            <label class=" ul-radio__position radio radio-primary form-check-inline">
+                                                <input type="radio" name="radio" value="0">
+                                                <span class="ul-form__radio-font">Sales Person</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="ul-radio__position radio radio-primary">
+                                                <input type="radio" name="radio" value="0">
+                                                <span class="ul-form__radio-font">Customer</span>
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please select user group
+                                        </small>
+                                    </div>
+                                    <div class="form-group col-md-4 ">
+                                        <label for="picker1">Select your option</label>
+                                        <select class="form-control">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                        <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                            Please select user group
+                                        </small>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="custom-separator"></div>
+                            <div class="tab-content pt-2">
+                                <div id="tabFade-pane-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="tabFade-1">
+                                    <div class="row form-row overflow-auto">
+                                        <div class="col-12">
+                                            <table class="table input_table">
+                                                <thead>
+                                                    <tr class="resizeble-cols">
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Avatar</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                
+                                                    <tr>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td><input type="text" class="form-control" placeholder="Enter"></td>
+                                                        <td>
+                                                            <div class="position-relative">
+                                                                <select class="form-control">
+                                                                    <option>Option 1</option>
+                                                                    <option>Option 2</option>
+                                                                    <option>Option 3</option>
+                                                                </select>
+                                                                <span class="span-right-input-icon">
+                                                                    <i class='bx bx-chevron-down'></i>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <label class="checkbox checkbox-outline-primary">
+                                                                <input type="checkbox" checked="">
+                                                                <span>Primary</span>
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td><button class="btn btn-sm btn-primary border-0">Submit</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tabFade-pane-2" class="tab-pane fade" role="tabpanel" aria-labelledby="tabFade-2">
+                                    <h2>Tab 2</h2>
+                                </div>
+                                <div id="tabFade-pane-3" class="tab-pane fade" role="tabpanel" aria-labelledby="tabFade-3">
+                                    <h2>Tab 3</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="mc-footer">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ul class="nav nav-tabs border-0 gap-1" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-1" class="controlled-btn active" data-bs-toggle="tab" data-bs-target="#tabFade-pane-1" role="tab" aria-controls="tabFade-pane-1" aria-selected="true">Panel 1</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-2" class="controlled-btn" data-bs-toggle="tab" data-bs-target="#tabFade-pane-2" role="tab" aria-controls="tabFade-pane-2" aria-selected="false">Panel 2</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" id="tabFade-3" class="controlled-btn" data-bs-toggle="tab" data-bs-target="#tabFade-pane-3" role="tab" aria-controls="tabFade-pane-3" aria-selected="false">Panel 3</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="color-modal">
+            <div class="presets">
+                <div class="d-flex justify-content-between w-100">
+                    <p class="mb-2">Preset colors</p>
+                    <p class="mb-2">Reset</p>
+                </div>
+                <div class="preset-colors">
+                    <span onclick="setRootColors(4, 90, 58)" style="background-color: hsl(4, 90%, 58%)"></span>
+                    <span onclick="setRootColors(340, 82, 52)" style="background-color: hsl(340, 82%, 52%)"></span>
+                    <span onclick="setRootColors(291, 64, 42)" style="background-color: hsl(291, 64%, 42%)"></span>
+                    <span onclick="setRootColors(262, 52, 47)" style="background-color: hsl(262, 52%, 47%)"></span>
+                    <span onclick="setRootColors(230, 99, 28)" style="background-color: hsl(230, 99%, 28%)"></span>
+                    <span onclick="setRootColors(270, 86, 72)" style="background-color: hsl(270, 86%, 72%)"></span>
+                    <span onclick="setRootColors(207, 90, 54)" style="background-color: hsl(207, 90%, 54%)"></span>
+                    <span onclick="setRootColors(199, 98, 48)" style="background-color: hsl(199, 98%, 48%)"></span>
+                    <span onclick="setRootColors(122, 39, 49)" style="background-color: hsl(122, 39%, 49%)"></span>
+                    <span onclick="setRootColors(66, 70, 54)" style="background-color: hsl(66, 70%, 54%)"></span>
+                    <span onclick="setRootColors(54, 100, 62)" style="background-color: hsl(54, 100%, 62%)"></span>
+                    <span onclick="setRootColors(45, 100, 51)" style="background-color: hsl(45, 100%, 51%)"></span>
+                    <span onclick="setRootColors(36, 100, 50)" style="background-color: hsl(36, 100%, 50%)"></span>
+                    <span onclick="setRootColors(14, 100, 57)" style="background-color: hsl(14, 100%, 57%)"></span>
+                    <span onclick="setRootColors(175, 83, 51)" style="background-color: hsl(175, 83%, 51%)"></span>
+                    <span onclick="setRootColors(304, 81, 53)" style="background-color: hsl(304, 81%, 53%)"></span>
+                </div>
+            </div>
+            <div class="color-picker">
+                <p class="mb-2">Choose your own color</p>
+                <div>
+                    <div id="parent"></div>
+                </div>
+            </div>
+            <div>
+                <label class="checkbox checkbox-outline-primary me-auto">
+                    <input type="checkbox" onchange="toggleDarkMode()">
+                    <p class="mb-1">Enable Dark Mode</p>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <span id="panel-toggler">
+                <i class='bx bx-cog'></i>
+            </span>
+        </div>
+
+        <section class="filter-section">
+            <div class="card">
+                <div class="card-header bg-transparent">
+                    <h3 class="card-title">Filter Section <i class='icofont-filter'></i></h3>
+                </div>
+                <div class="card-body">
+                    <div class="row user-form row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                    Please enter your full name
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                <div class="position-relative">
+                                    <select class="form-control">
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                    <span class="span-right-input-icon">
+                                        <i class='bx bx-chevron-down'></i>
+                                    </span>
+                                </div>
+                                <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                    Please enter your full name
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                    Please enter your full name
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                <div class="position-relative">
+                                    <select class="form-control">
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                    </select>
+                                    <span class="span-right-input-icon">
+                                        <i class='bx bx-chevron-down'></i>
+                                    </span>
+                                </div>
+                                <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                    Please enter your full name
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                    Please enter your full name
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="dropdown-link filter-toggler">Advance Search <i class="icofont-rounded-down"></i></a>
+                    <div id="filter-panel" style="display: none;">
+                        <div class="custom-separator my-3"></div>
+                        <div class="row user-form row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <div class="position-relative">
+                                        <select class="form-control">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                        <span class="span-right-input-icon">
+                                            <i class='bx bx-chevron-down'></i>
+                                        </span>
+                                    </div>
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <div class="position-relative">
+                                        <select class="form-control">
+                                            <option>Option 1</option>
+                                            <option>Option 2</option>
+                                            <option>Option 3</option>
+                                        </select>
+                                        <span class="span-right-input-icon">
+                                            <i class='bx bx-chevron-down'></i>
+                                        </span>
+                                    </div>
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div>
+                            <!-- <div class="col">
+                                <div class="form-group">
+                                    <label for="inputtext11" class="ul-form__label">Full Name:</label>
+                                    <input type="text" class="form-control" id="inputtext11" placeholder="Enter full name">
+                                    <small id="passwordHelpBlock" class="ul-form__text form-text ">
+                                        Please enter your full name
+                                    </small>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer small-card-footer text-end bg-transparent">
+                    <ul class="btn-list list-inline mb-0 justify-content-end">
+                        <li>
+                            <button class="controlled-btn"><i class="icofont-search-1"></i> Search</button>
+                        </li>
+                        <li>
+                            <button class="controlled-outlined-btn"><i class="icofont-trash"></i> Clear all</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header bg-transparent">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <h3 class="card-title" style="line-height: 2em;">Search Results <i class="icofont-listing-box"></i></h3>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <ul class="btn-list list-inline mb-0">
+                                <li>
+                                    <button class="controlled-btn"><i class="icofont-plus"></i> Add new</button>
+                                </li>
+                                <li>
+                                    <button class="controlled-outlined-btn"><i class="icofont-trash"></i> Delete all</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="user-form filter-list">
+                        <div class="table-responsive">
+                            <table class="table user_table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Phone</th>
+                                        <th scope="col">Role</th>
+                                        <th scope="col">Age</th>
+                                        <th scope="col">Joining Date</th>
+                                        <th scope="col">Salary</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img class="rounded-circle m-0 avatar-sm-table me-2" src="./img/user.jpg" alt="user"> Zack Snyder</a>
+                                        </td>
+                                        <td>jameswann@gmail.com</td>
+                                        <td>+88012378478</td>
+                                        <td><a href="#" class="badge bg-warning p-2">Backend</a></td>
+                                        <td>20</td>
+                                        <td>April 34, 2019</td>
+                                        <td>$320,800</td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img class="rounded-circle m-0 avatar-sm-table me-2" src="./img/user.jpg" alt="user"> Zack Snyder</a>
+                                        </td>
+                                        <td>jameswann@gmail.com</td>
+                                        <td>+88012378478</td>
+                                        <td><a href="#" class="badge bg-info p-2">Backend</a></td>
+                                        <td>20</td>
+                                        <td>April 34, 2019</td>
+                                        <td>$320,800</td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img class="rounded-circle m-0 avatar-sm-table me-2" src="./img/user.jpg" alt="user"> Zack Snyder</a>
+                                        </td>
+                                        <td>jameswann@gmail.com</td>
+                                        <td>+88012378478</td>
+                                        <td><a href="#" class="badge bg-danger p-2">Backend</a></td>
+                                        <td>20</td>
+                                        <td>April 34, 2019</td>
+                                        <td>$320,800</td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <a href="#"><img class="rounded-circle m-0 avatar-sm-table me-2" src="./img/user.jpg" alt="user"> Zack Snyder</a>
+                                        </td>
+                                        <td>jameswann@gmail.com</td>
+                                        <td>+88012378478</td>
+                                        <td><a href="#" class="badge bg-primary p-2">Backend</a></td>
+                                        <td>20</td>
+                                        <td>April 34, 2019</td>
+                                        <td>$320,800</td>
+                                        <td>
+                                            <i class='bx bxs-pencil me-2' style="color: #23dc23;"></i>
+                                            <i class='bx bx-x-circle' style="color: orangered;"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <div class="row pagination-row">
+                        <div class="col-sm-12 col-md-5">
+                            <span onclick="handleAlerts('success')">Showing 1 to 10 of 15 entries</span>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <nav aria-label="Search results pages">
+                                <ul class="pagination justify-content-end mb-0">
+                                    <li class="page-item"><a href="#" class="page-link">Previous</a></li>
+                                    <li class="page-item disabled" tabindex="-1"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                    <a href="#" class="page-link">
+                                        3 <span class="visually-hidden">(current)</span>
+                                    </a>
+                                    </li>
+                                    <li class="page-item">
+                                    <a href="#" class="page-link" aria-disabled="true">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        
+    </main>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/vanilla-picker.js"></script>
+<script src="./js/sweetalert2.min.js"></script>                <!-- This file also includes css for sweet alerts -->
+<script src="./js/sweetAlert2-init.js"></script>               <!-- Initialization of sweet alerts -->
+<script src="./js/echarts.min.js"></script>
+<script src="./js/echart-options.min.js"></script>
+<script src="./new/js/index.js"></script>
+<script>
+
+    var _extends = Object.assign || function (target) { 
+        for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i];
+            for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                    target[key] = source[key]; 
+                }
+            }
+        }
+        return target;
+    };
+
+    var lineChart1 = echarts.init(document.getElementById('line-chart-1'));
+    var lineChart2 = echarts.init(document.getElementById('line-chart-2'));
+    var eChartBar = echarts.init(document.getElementById('eChartBar'));
+    // var eChartPie = echarts.init(document.getElementById('eChartPie'));
+
+    const hue = getComputedStyle(document.body).getPropertyValue('--hue');
+    const sat = getComputedStyle(document.body).getPropertyValue('--sat');
+    const bgTertiary = getComputedStyle(document.body).getPropertyValue('--bg-tertiary');
+    const bgPrimary = getComputedStyle(document.body).getPropertyValue('--clr-primary');
+    
+
+    const barChartOption = {
+        legend: {
+            borderRadius: 0,
+            orient: 'horizontal',
+            x: 'right',
+            data: ['Online', 'Offline'],
+            textStyle: {color: '#fff'}
+        },
+        grid: {
+            left: '8px',
+            right: '8px',
+            bottom: '0',
+            containLabel: true
+        },
+        tooltip: {
+            show: true,
+            backgroundColor: 'rgba(0, 0, 0, .8)'
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+            axisTick: {
+                alignWithLabel: true
+            },
+            splitLine: {
+                show: false
+            },
+            axisLine: {
+                show: true,
+                lineStyle: { color: '#fff' }
+            },
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}'               // '₹{value}' for ruppee symbol           
+            },
+            min: 0,
+            max: 100000,
+            interval: 25000,
+            axisLine: {
+                show: true,
+                lineStyle: { color: '#fff' }
+            },
+            splitLine: {
+                show: true,
+                interval: 'auto'
+            },
+        }],
+
+        series: [{
+            name: 'Online',
+            data: [35000, 69000, 22500, 60000, 50000, 50000, 30000, 80000, 70000, 60000, 20000, 30005],
+            label: { show: false, color: '#fff' },
+            type: 'bar',
+            barGap: 0,
+            color: '#e1df79',
+            smooth: true,
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: -2,
+                    shadowColor: 'rgba(0, 0, 0, 0.3)'
+                }
+            }
+        }, {
+            name: 'Offline',
+            data: [45000, 82000, 35000, 93000, 71000, 89000, 49000, 91000, 80200, 86000, 35000, 40050],
+            label: { show: false, color: '#fff' },
+            type: 'bar',
+            color: '#8bdaff',
+            smooth: true,
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: -2,
+                    shadowColor: 'rgba(0, 0, 0, 0.3)'
+                }
+            }
+        }]
+    }
+
+    const pieChartOptions = {
+        color: ['#62549c', '#7566b5', '#7d6cbb', '#8877bd', '#9181bd', '#6957af'],
+        tooltip: {
+            show: true,
+            backgroundColor: 'rgba(0, 0, 0, .8)'
+        },
+
+        series: [{
+            name: 'Sales by Country',
+            type: 'pie',
+            radius: '60%',
+            center: ['50%', '50%'],
+            data: [{ value: 535, name: 'USA' }, { value: 310, name: 'Brazil' }, { value: 234, name: 'France' }, { value: 155, name: 'BD' }, { value: 130, name: 'UK' }, { value: 348, name: 'India' }],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }]
+    }
+
+
+    const lineChart1Options = _extends({}, echartOptions.lineFullWidth, {
+        series: [_extends({
+            data: [30, 10, 40, 10, 40, 20, 90]
+        }, echartOptions.smoothLine, {
+            markArea: {
+                label: {
+                    show: true
+                }
+            },
+            areaStyle: {
+                color: bgTertiary,
+                origin: 'start'
+            },
+            lineStyle: {
+                color: `hsla(${hue}, ${sat}, 65%)`
+            },
+            itemStyle: {
+                color: bgPrimary
+            }
+        })]
+    });
+
+    const lineChart2Options = _extends({}, echartOptions.lineFullWidth, {
+        series: [_extends({
+            data: [30, 40, 20, 50, 40, 80, 90]
+        }, echartOptions.smoothLine, {
+            markArea: {
+                label: {
+                    show: true
+                }
+            },
+            areaStyle: {
+                color: 'rgba(255, 193, 7, 0.2)',
+                origin: 'start'
+            },
+            lineStyle: {
+                color: `#FFC107`
+            },
+            itemStyle: {
+                color: '#FFC107'
+            }
+        })]
+    });
+
+
+
+    
+    if (lineChart1) {
+        lineChart1.setOption(lineChart1Options);
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                lineChart1.resize();
+            }, 500);
+        });
+    }
+
+    if (lineChart2) {
+        lineChart2.setOption(lineChart2Options);
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                lineChart2.resize();
+            }, 500);
+        });
+    }
+
+    if (eChartBar) {
+        eChartBar.setOption(barChartOption);
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                eChartBar.resize();
+            }, 500);
+        });
+    }
+
+    if (eChartPie) {
+        eChartPie.setOption(pieChartOptions);
+        $(window).on('resize', function () {
+            setTimeout(function () {
+                eChartPie.resize();
+            }, 500);
+        });
+    }   
+</script>
+</body>
+</html>

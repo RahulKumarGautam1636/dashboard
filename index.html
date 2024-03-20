@@ -223,6 +223,7 @@
                 <br class="d-sm-none"/>
                 <span>Dashboard</span>
                 <span>Version 1</span>
+                <span><a href="./newDashboard.html">Version 2</a></span>
             </div>
             <div class="row row-cols-2 row-cols-lg-4 summary pt-3 pt-lg-4 gy-2 gy-lg-4">
                 <div class="col">
@@ -478,17 +479,59 @@
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table user_table">
+                            <table class="table user_table" id="draggable-table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Avatar</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Action</th>
+                                        <th draggable="true" scope="col">#</th>
+                                        <th draggable="true" scope="col">Name</th>
+                                        <th draggable="true" scope="col">Avatar</th>
+                                        <th draggable="true" scope="col">Email</th>
+                                        <th draggable="true" scope="col">Status</th>
+                                        <th draggable="true" scope="col">Action</th>
                                     </tr>
                                 </thead>
+                                <script>
+                                    var dragCol = null;
+                                    function handleDragStart(e) {
+                                        dragCol = this;
+                                        e.dataTransfer.efferAllowed = 'move';
+                                        e.dataTransfer.setData('text/html', this.outerHTML);
+                                    }
+                                    function handleDragOver(e) {
+                                        if (e.preventDefault) {
+                                            e.preventDefault();
+                                        }
+                                        e.dataTransfer.dropEffect = 'move';
+                                        return false;
+                                    }
+                                    function handleDrop(e) {
+                                        if (e.stopPropagation) {
+                                            e.stopPropagation();
+                                        }
+                                        if (dragCol !== this) {
+                                            var sourceIndex = Array.from(dragCol.parentNode.children).indexOf(dragCol);
+                                            var targetIndex = Array.from(this.parentNode.children).indexOf(this);
+                                            var table = document.getElementById('draggable-table');
+                                            var rows = table.rows;
+                                            for (var i=0; i<rows.length; i++) {
+                                                var sourceCell = rows[i].cells[sourceIndex];
+                                                var targetCell = rows[i].cells[targetIndex];
+                                                var tempHTML = sourceCell.innerHTML;
+                                                sourceCell.innerHTML = targetCell.innerHTML;
+                                                targetCell.innerHTML = tempHTML;
+                                            }
+                                        }
+                                        return false;
+                                    }
+                                    var cols = document.querySelectorAll('#draggable-table th');
+                                    console.log(cols);
+                                    [].forEach.call(cols, function(col) {
+                                        col.addEventListener('dragstart', handleDragStart, false);
+                                        col.addEventListener('dragover', handleDragOver, false);
+                                        col.addEventListener('drop', handleDrop, false);
+                                    })
+                                </script>
+
                                 <tbody>
                                     <tr>
                                         <td>1</td>
@@ -707,7 +750,7 @@
                                         <div class="col-12">
                                             <table class="table input_table">
                                                 <thead>
-                                                    <tr>
+                                                    <tr class="resizeble-cols">
                                                         <th scope="col">#</th>
                                                         <th scope="col">Name</th>
                                                         <th scope="col">Avatar</th>
@@ -1255,7 +1298,7 @@
         yAxis: [{
             type: 'value',
             axisLabel: {
-                formatter: '${value}'
+                formatter: '{value}'               // '₹{value}' for ruppee symbol           
             },
             min: 0,
             max: 100000,

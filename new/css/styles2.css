@@ -180,6 +180,7 @@ section.home {
 .list-card img {
     font-size: 0.75em;
     max-height: 3rem;
+    border: 1px solid #dddddd;
 }
 .list-card > div {
     text-align: left;
@@ -251,7 +252,7 @@ section.home {
 }
 .main-chart-label .card {
     background: transparent !important;
-    box-shadow: none;
+    box-shadow: none !important;
 }
 .main-chart-label .summary.summary-dark .card .content p:last-child {
     font-size: clamp(1em, 2.3vw, 1.9em);
@@ -261,4 +262,13 @@ section.home {
     font-size: 1.2em;
     margin-bottom: 0;
     font-weight: 600;
+}
+.card {
+    box-shadow: var(--bx-shadow-dark);
+}
+.home .card {
+    box-shadow: var(--bx-shadow-dark);
+}
+.user-dropdown img {
+    border: 1px solid #dddddd;
 }

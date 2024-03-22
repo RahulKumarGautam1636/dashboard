@@ -8,9 +8,11 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="./css/colors.css">
+    <link rel="stylesheet" href="./new/css/colors2.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./new/css/styles2.css">
     <link rel="stylesheet" href="./css/responsive.css"> 
+    <link rel="stylesheet" href="./new/css/responsive2.css"> 
     <link rel="stylesheet" href="./css/animation.css">
     <title>Dashboard</title>
 </head>
@@ -25,6 +27,7 @@
                             <rect width="400" height="400" fill="var(--bg-secondary)"/>
                             <path d="M251.468 93.4881C279.468 102.191 295.468 134.655 298.968 149.488L254.468 158.488C246.468 124.488 209.135 122.321 191.468 125.488C176.135 126.655 144.868 141.788 142.468 192.988C140.068 244.188 165.135 265.655 177.968 269.988C210.368 285.588 244.135 268.488 256.968 257.988V229.488H206.468V192.988H301.968V279.988C268.968 314.988 173.468 332.488 128.468 284.988C83.4682 237.488 92.4682 149.488 128.468 114.988C164.468 80.4881 213.468 81.6772 251.468 93.4881Z" fill="var(--clr-primary)"/>
                         </svg> -->
+                        <span id="menu-toggler"><i class='bx bx-menu'></i></span>
                         <svg class="brand-logo logo" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="74.38" cy="74.2227" r="73.4891" fill="var(--clr-primary)"/>
                             <circle cx="73.5556" cy="74.6983" r="49.105" fill="hsla(var(--hue), var(--sat), 36%)"/>
@@ -32,10 +35,10 @@
                             <circle cx="112.918" cy="35.1902" r="10" fill="#FFB100"/>
                             <circle cx="73.5556" cy="78.5115" r="10" fill="#FFB100"/>
                         </svg>
-                        <span id="menu-toggler"><i class='bx bx-menu'></i></span>
+                        <h3 class="compName d-none d-sm-block">Gbooks Infotech Pvt. Ltd.</h3>
                     </div>
                 </li>
-                <!-- <li class="d-none d-md-block">
+                <li class="ms-auto">
                     <div class="dropdown">
                         <a class="btn btn-secondary btn-sm dropdown-toggle bg-transparent border-0" href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false">Mega menu</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownLink">
@@ -44,14 +47,14 @@
                             <a href="#" class="dropdown-item">Third item</a>
                         </div>
                     </div>
-                </li> -->
-                <li class="d-none d-md-block ms-auto">
+                </li>
+                <!-- <li class="d-none d-md-block">
                     <div class="input-group header-search">
                         <input type="text" class="form-control border-0" placeholder="Search" aria-label="Amount (to nearest dollar)">
                         <button class="input-group-text border-0"><i class='bx bx-search'></i></button>
                     </div>
-                </li>
-                <!-- <li>
+                </li> -->
+                <li class="">
                     <a class="h-pill" href="#"><i class='bx bx-cross'></i></a>
                 </li>
                 <li>
@@ -63,7 +66,7 @@
                             <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="font-size: 0.55em; font-family: 'Nunito'; background: #e44dff; display: block;">2</span>
                         </i>
                     </a>
-                </li> -->
+                </li>
                 <li>
                     <div class="dropdown user-dropdown">
                         <a href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/user.jpg" alt="user"></a>
@@ -222,12 +225,34 @@
 
     <main id="main-content-wrapper">
         <section id="home" class="home">
-            <div class="heading heading--float">
-                <h5>Primary</h5>
-                <h2>Dashboard</h2>
-            </div>
             <div class="row chart-row-1 gy-3">
                 <div class="col-12 col-md-9">
+                    <div class="row gy-3">
+                        <div class="heading heading--float d-flex justify-content-between gap-3">
+                            <div>
+                                <h5>Primary</h5>
+                                <h2>Dashboard</h2>
+                            </div>
+                            <ul class="header-nav" style="font-size: 1.2em;">
+                                <li class="ms-auto">
+                                    <div class="input-group header-search">
+                                        <input type="text" class="form-control border-0" placeholder="Search" aria-label="Amount (to nearest dollar)">
+                                        <button class="input-group-text border-0"><i class='bx bx-search'></i></button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown user-dropdown">
+                                        <a href="#" id="dropdownLink" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/user.jpg" alt="user"></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownLink">
+                                            <a href="#" class="dropdown-item">First item</a>
+                                            <a href="#" class="dropdown-item">Second item</a>
+                                            <a href="#" class="dropdown-item">Third item</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="row gy-3">
                         <div class="col-12 col-md-8">
                             <div class="card border-0 card-dark h-100">
@@ -240,7 +265,40 @@
                                             <option value="yearly">Yearly</option>
                                         </select>
                                     </div>
-                                    <div id="eChartBar" style="height: 260px;"></div>
+                                    <!-- <div id="eChartBar" style="height: 260px;"></div> -->
+                                    <img class="img-fluid w-100" src="./new/img/chart2.svg" alt="bar chart">
+                                    <div class="main-chart-label">
+                                        <div class="summary summary-dark">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center">
+                                                    <div class="content floating chart-label">
+                                                        <p class="mb-0">Total Time</p>
+                                                        <p class="mb-0">748 hr</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="summary summary-dark">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center">
+                                                    <div class="content floating chart-label">
+                                                        <p class="mb-0">Total Value</p>
+                                                        <p class="mb-0">9.18 St.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="summary summary-dark">
+                                            <div class="card">
+                                                <div class="card-body d-flex align-items-center">
+                                                    <div class="content floating chart-label">
+                                                        <p class="mb-0">Total Time</p>
+                                                        <p class="mb-0">9.20 hr</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -589,48 +647,6 @@
                                         <th draggable="true" scope="col">Action</th>
                                     </tr>
                                 </thead>
-                                <script>
-                                    var dragCol = null;
-                                    function handleDragStart(e) {
-                                        dragCol = this;
-                                        e.dataTransfer.efferAllowed = 'move';
-                                        e.dataTransfer.setData('text/html', this.outerHTML);
-                                    }
-                                    function handleDragOver(e) {
-                                        if (e.preventDefault) {
-                                            e.preventDefault();
-                                        }
-                                        e.dataTransfer.dropEffect = 'move';
-                                        return false;
-                                    }
-                                    function handleDrop(e) {
-                                        if (e.stopPropagation) {
-                                            e.stopPropagation();
-                                        }
-                                        if (dragCol !== this) {
-                                            var sourceIndex = Array.from(dragCol.parentNode.children).indexOf(dragCol);
-                                            var targetIndex = Array.from(this.parentNode.children).indexOf(this);
-                                            var table = document.getElementById('draggable-table');
-                                            var rows = table.rows;
-                                            for (var i=0; i<rows.length; i++) {
-                                                var sourceCell = rows[i].cells[sourceIndex];
-                                                var targetCell = rows[i].cells[targetIndex];
-                                                var tempHTML = sourceCell.innerHTML;
-                                                sourceCell.innerHTML = targetCell.innerHTML;
-                                                targetCell.innerHTML = tempHTML;
-                                            }
-                                        }
-                                        return false;
-                                    }
-                                    var cols = document.querySelectorAll('#draggable-table th');
-                                    console.log(cols);
-                                    [].forEach.call(cols, function(col) {
-                                        col.addEventListener('dragstart', handleDragStart, false);
-                                        col.addEventListener('dragover', handleDragOver, false);
-                                        col.addEventListener('drop', handleDrop, false);
-                                    })
-                                </script>
-
                                 <tbody>
                                     <tr>
                                         <td>1</td>
@@ -1355,7 +1371,7 @@
 
     var lineChart1 = echarts.init(document.getElementById('line-chart-1'));
     var lineChart2 = echarts.init(document.getElementById('line-chart-2'));
-    var eChartBar = echarts.init(document.getElementById('eChartBar'));
+    // var eChartBar = echarts.init(document.getElementById('eChartBar'));
     // var eChartPie = echarts.init(document.getElementById('eChartPie'));
 
     const hue = getComputedStyle(document.body).getPropertyValue('--hue');
@@ -1537,23 +1553,23 @@
         });
     }
 
-    if (eChartBar) {
-        eChartBar.setOption(barChartOption);
-        $(window).on('resize', function () {
-            setTimeout(function () {
-                eChartBar.resize();
-            }, 500);
-        });
-    }
+    // if (eChartBar) {
+    //     eChartBar.setOption(barChartOption);
+    //     $(window).on('resize', function () {
+    //         setTimeout(function () {
+    //             eChartBar.resize();
+    //         }, 500);
+    //     });
+    // }
 
-    if (eChartPie) {
-        eChartPie.setOption(pieChartOptions);
-        $(window).on('resize', function () {
-            setTimeout(function () {
-                eChartPie.resize();
-            }, 500);
-        });
-    }   
+    // if (eChartPie) {
+    //     eChartPie.setOption(pieChartOptions);
+    //     $(window).on('resize', function () {
+    //         setTimeout(function () {
+    //             eChartPie.resize();
+    //         }, 500);
+    //     });
+    // }   
 </script>
 </body>
 </html>

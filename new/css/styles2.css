@@ -1,8 +1,11 @@
 body {
     background: var(--bg-primary-2);
 }
+section {
+    padding: 1.5em;
+}
 section.home {
-    padding: 1em 1.6em 2vw;
+    padding-top: 1em;
 }
 /* sidebar start */
 .sidebar ul {
@@ -235,4 +238,27 @@ section.home {
 .card-type-1 table {
     font-weight: 600;
     font-size: 0.78em;
+}
+
+.main-chart-label {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 1.2em;
+    width: 100%;
+    padding: 0 2em;
+}
+.main-chart-label .card {
+    background: transparent !important;
+    box-shadow: none;
+}
+.main-chart-label .summary.summary-dark .card .content p:last-child {
+    font-size: clamp(1em, 2.3vw, 1.9em);
+}
+.compName {
+    color: #0770a5;
+    font-size: 1.2em;
+    margin-bottom: 0;
+    font-weight: 600;
 }

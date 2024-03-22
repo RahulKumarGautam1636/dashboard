@@ -1,0 +1,20 @@
+:root {
+    /* New Dashboard colors */
+    --bg-primary-2: #efefef;
+    --clr-primary-2: #7163ba;
+    --clr-secondary-2: #ec608d;
+    --clr-tertiary-2: hsl(41.65deg 100% 50%);
+    --text-primary-2: #51439b;
+    --bRadius: 1.2em;
+    --bx-clrShadow-1: rgb(213 107 255 / 20%) 0px 18px 15px;
+}
+
+@media only screen and (max-width: 576px) {
+    :root {
+        --menu-left-offset: 0;          /* to prevent unwanted streching of bar chart in mobile view. */
+    }
+}
+
+/* .dark-mode {
+
+} */

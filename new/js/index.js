@@ -9,10 +9,17 @@ $(function() {
     const colorPanel = $('.color-modal');
     const filterToggler = $('.filter-toggler');
     const filterPanel = $('#filter-panel');
+    const screenWidth = $(window).width();
 
     // initial page setup..
+
+    if (screenWidth < 500) {
+        document.body.style.setProperty('--menu-left-offset', `0px`);
+        sideMenu.removeClass('active');
+    } else {
+        document.body.style.setProperty('--menu-left-offset', `${$('.side-menu')[0].clientWidth}px`);
+    }
     document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);
-    document.body.style.setProperty('--menu-left-offset', `${$('.side-menu')[0].clientWidth}px`);
     summary.css('font-size', 'clamp(0.2em, 2.8vw, 1em)'); 
     $(window).resize(function(){
         document.body.style.setProperty('--menu-top-offset', `${$('header').height()}px`);

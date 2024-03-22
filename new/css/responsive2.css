@@ -1,0 +1,21 @@
+@media only screen and (max-width: 576px) {
+    section {
+        padding: 1em;
+    }
+    .card-type-1 .card-body {
+        padding-bottom: 1.5em;
+    }
+    .card-type-1 .table-responsive {
+        height: auto;
+        max-height: 13em;
+    }
+    .users-list ul .list-card {
+        gap: 1.5em;
+    }
+    .color-modal {
+        top: 11vh;
+    }
+    .main-chart-label .card-body {
+        padding: 0;
+    }
+}
